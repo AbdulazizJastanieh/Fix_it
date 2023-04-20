@@ -10,4 +10,5 @@ public class Worker {
     Date Date_of_Birth;
     String Working_area;
     double Balance;
+    Service services[];
 }

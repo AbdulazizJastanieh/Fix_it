@@ -8,6 +8,7 @@ public class Customer {
     String First_name;
     String last_name;
     Date Date_of_Birth;
+    int age;
     String Location;
     double Balance;
 }
