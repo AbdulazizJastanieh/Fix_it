@@ -1,13 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.fix_it;
 
-/**
- *
- * @author 96657
- */
+import java.util.Date;
+
 public class Worker {
-    
+    String WID;
+    String First_name;
+    String last_name;
+    Date Date_of_Birth;
+    String Working_area;
+    double Balance;
 }

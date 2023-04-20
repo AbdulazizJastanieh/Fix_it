@@ -4,6 +4,7 @@ import java.util.*;
 
 
 public class Customer {
+    String CID;
     String First_name;
     String last_name;
     Date Date_of_Birth;
