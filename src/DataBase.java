@@ -16,6 +16,7 @@ public class DataBase{
             ResultSet RS= s.executeQuery("select * from customer");
             while (RS.next()){
                 String name = RS.getString(1);
+                System.out.println(name);
             }
             return conn;
         } catch(Exception e){ System.out.println(e);
