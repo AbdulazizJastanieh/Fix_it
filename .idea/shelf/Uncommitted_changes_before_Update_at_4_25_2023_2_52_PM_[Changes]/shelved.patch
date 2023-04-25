@@ -1,0 +1,116 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"93f8510b-5ea5-40c8-ba0b-5511b936f076\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/Fix_it.iml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_33.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_33.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_331.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/modules.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/build.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/lib/mysql-connector-j-8.0.33.jar\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/manifest.mf\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/nbproject/build-impl.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/nbproject/genfiles.properties\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/nbproject/private/private.properties\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/nbproject/private/private.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/nbproject/project.properties\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/nbproject/project.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/DataBase.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/DataBase.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OuuM57ZFqGeSesnbpYHWJpSjFA\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/mysql-connector-j-8.0.33.jar\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Libraries\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"Fix_it\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"93f8510b-5ea5-40c8-ba0b-5511b936f076\" name=\"Changes\" comment=\"\" />\r\n      <created>1682422739810</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1682422739810</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1f0831ef10b885df53f474be226d5782a2c38b20)
++++ b/.idea/workspace.xml	(date 1682423347807)
+@@ -1,22 +1,13 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/Fix_it.iml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_33.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_33.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_331.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++    <list default="true" id="5f05da62-db55-4849-bf05-bf9c044bc406" name="Changes" comment="changed from maven to normal java">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_16_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_16_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_24_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_24_PM__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/lib/mysql-connector-j-8.0.33.jar" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/manifest.mf" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -29,42 +20,49 @@
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-  <component name="ProjectId" id="2OuuM57ZFqGeSesnbpYHWJpSjFA" />
++  <component name="ProjectId" id="2OuqV3rn3bRXZR5BNuN8mllUIRn" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">
+-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-j-8.0.33.jar" />
+-    <property name="project.structure.last.edited" value="Libraries" />
+-    <property name="project.structure.proportion" value="0.0" />
+-    <property name="project.structure.side.proportion" value="0.2" />
+-  </component>
+-  <component name="RunManager">
+-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Main" />
+-      <module name="Fix_it" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <recent_temporary>
+-      <list>
+-        <item itemvalue="Application.Main" />
+-      </list>
+-    </recent_temporary>
+-  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "last_opened_file_path": "G:/main folder/university/current semester/CPIT 251/programming/Fix_it"
++  }
++}]]></component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="" />
+-      <created>1682422739810</created>
++      <changelist id="5f05da62-db55-4849-bf05-bf9c044bc406" name="Changes" comment="" />
++      <created>1682420842806</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+-      <updated>1682422739810</updated>
++      <updated>1682420842806</updated>
+     </task>
++    <task id="LOCAL-00001" summary="changed from maven to normal java">
++      <created>1682420878730</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1682420878730</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="changed from maven to normal java" />
++    <option name="LAST_COMMIT_MESSAGE" value="changed from maven to normal java" />
++  </component>
+ </project>
+\ No newline at end of file
