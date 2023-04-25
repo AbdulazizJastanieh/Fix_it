@@ -16,7 +16,19 @@ public class Store {
             System.out.println("connected !!!");
             Statement s = conn.createStatement(); //create statement
             s.execute("USE sql8614265"); //to use this database (we only have 1 database in the server)
-            s.close(); //close the Statement
+            ResultSet RS= s.executeQuery("select * from customer");
+            while (RS.next()){
+                System.out.print(" "+RS.getString(1));
+                System.out.print(" "+RS.getString(2));
+                System.out.print(" "+RS.getString(3));
+                System.out.print(" "+RS.getString(4));
+                System.out.print(" "+RS.getString(5));
+                System.out.print(" "+RS.getString(6));
+                System.out.print(" "+RS.getString(7));
+                System.out.print(" "+RS.getString(8));
+                System.out.println(" "+RS.getString(9));
+
+            }
         } catch(Exception e){ System.out.println(e);}
     }
 
