@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: group.id:artifact.id:1.0" type="java-imported" external-system-id="Maven">
+    <properties groupId="group.id" artifactId="artifact.id" version="1.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/group/id/artifact.id/1.0/artifact.id-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/group/id/artifact.id/1.0/artifact.id-1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/group/id/artifact.id/1.0/artifact.id-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

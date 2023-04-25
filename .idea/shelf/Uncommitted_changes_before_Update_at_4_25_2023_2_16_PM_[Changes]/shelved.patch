@@ -1,0 +1,38 @@
+Index: src/main/java/com/mycompany/fix_it/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.mycompany.fix_it;\r\n\r\npublic class Main {\r\n    \r\n\r\n    public static void main(String[] args) {\r\n        System.out.println(\"Hello World!\");\r\n        \r\n        Store.connect();\r\n        \r\n        \r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/com/mycompany/fix_it/Main.java b/src/main/java/com/mycompany/fix_it/Main.java
+--- a/src/main/java/com/mycompany/fix_it/Main.java	
++++ b/src/main/java/com/mycompany/fix_it/Main.java	
+@@ -5,7 +5,6 @@
+ 
+     public static void main(String[] args) {
+         System.out.println("Hello World!");
+-        
+         Store.connect();
+         
+         
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n    <groupId>com.mycompany</groupId>\r\n    <artifactId>Fix_it</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n    <packaging>jar</packaging>\r\n    <properties>\r\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\r\n        <maven.compiler.source>1.8</maven.compiler.source>\r\n        <maven.compiler.target>1.8</maven.compiler.target>\r\n        <exec.mainClass>com.mycompany.fix_it.Fix_it</exec.mainClass>\r\n    </properties>\r\n</project>
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	
++++ b/pom.xml	
+@@ -5,6 +5,13 @@
+     <artifactId>Fix_it</artifactId>
+     <version>1.0-SNAPSHOT</version>
+     <packaging>jar</packaging>
++    <dependencies>
++        <dependency>
++            <groupId>group.id</groupId>
++            <artifactId>artifact.id</artifactId>
++            <version>1.0</version>
++        </dependency>
++    </dependencies>
+     <properties>
+         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+         <maven.compiler.source>1.8</maven.compiler.source>
