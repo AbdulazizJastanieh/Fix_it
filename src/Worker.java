@@ -1,9 +1,10 @@
+import java.util.Arrays;
 import java.util.Date;
 
 public class Worker extends Person{
     private String WID;
-    private String Working_area;
     private double Balance;
+    private Customer customer;
     private Service services[];
 
     public String getWID() {
@@ -14,12 +15,14 @@ public class Worker extends Person{
         this.WID = WID;
     }
 
-    public String getWorking_area() {
-        return Working_area;
-    }
-
-    public void setWorking_area(String Working_area) {
-        this.Working_area = Working_area;
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "WID='" + WID + '\'' +
+                ", Balance=" + Balance +
+                ", customer=" + customer +
+                ", services=" + Arrays.toString(services) +
+                '}';
     }
 
     public double getBalance() {
@@ -38,21 +41,20 @@ public class Worker extends Person{
         this.services = services;
     }
 
-    public Worker(String WID, String Working_area, double Balance, Service[] services, String First_name, String last_name, int age, Date Date_of_Birth, String Username, String Password, Order[] orders) {
-        super(First_name, last_name, age, Date_of_Birth, Username, Password, orders);
+    public Worker(String WID , double Balance , String First_name, String last_name,  String Username, String Password,Customer customer) {
+        super(First_name, last_name,  Username, Password, null);
         this.WID = WID;
-        this.Working_area = Working_area;
+        this.Balance = Balance;
+        this.customer =customer;
+    }
+
+
+    public Worker(String WID , double Balance, Service[] services, String First_name, String last_name, String Username, String Password, Order[] orders) {
+        super(First_name, last_name,  Username, Password, orders);
+        this.WID = WID;
         this.Balance = Balance;
         this.services = services;
     }
-
-    public Worker(String WID, String Working_area, double Balance, Service[] services) {
-        this.WID = WID;
-        this.Working_area = Working_area;
-        this.Balance = Balance;
-        this.services = services;
-    }
-
 
     public Worker(){
         super();
