@@ -8,7 +8,7 @@ public class Main {
     ArrayList<Worker> WorkerArray = new ArrayList<Worker>(); //make arraylist of worker
         ArrayList<Order> OrderArray = new ArrayList<Order>(); //make arraylist of order
         ArrayList<Service> ServiceArray = new ArrayList<Service>(); //make arraylist of service
-    ArrayList<ArrayList> allA= DataBase.init(); //load all the info from the database and put it in allA
+    ArrayList<ArrayList> allA= DataBase._init_(); //load all the info from the database and put it in allA
     CustomerArray = allA.get(0); //store the customer objects (work with this)
     WorkerArray = allA.get(1); //store the worker objects (work with this)
     OrderArray = allA.get(2); //store the order objects (work with this)

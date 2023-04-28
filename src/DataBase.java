@@ -21,7 +21,7 @@ public class DataBase{
 
     }
 
-    public static ArrayList<ArrayList> init() { //this method is used to load all the info from the database to the objects !
+    public static ArrayList<ArrayList> _init_() { //this method is used to load all the info from the database to the objects !
         String url = "jdbc:mysql://sql8.freemysqlhosting.net"; //this is the URL with add-on of the dataBase the below is the base URL
         //String url = "sql8.freemysqlhosting.net"; //base URL
         String username = "sql8614265"; //USERNAME and the name of the dataBASE
@@ -88,29 +88,6 @@ public class DataBase{
                 String SID = RS3.getString(1);
                 String name = RS3.getString(2);
                 Double price = RS3.getDouble(3);
-
-
-
-
-              /*  int i=0; //counter for loop to mark the customer class
-                int j =-1; //to store the customer class number
-                while (i<customerArrayList.size()) {
-                    if (customerArrayList.get(i).getCID().equals(CID)) { //if found
-                        j = i; //if found store it's number in j
-                    }
-                    i++;
-                }
-                if (j != -1){ //check if found or not then store the object if found
-                    serviceCustomer = customerArrayList.get(j);
-                }
-
-                //now we need to add the services to the worker we want
-                //so first lets check if the worker has the service or not
-                int k =0;
-                while(k<workerArrayList.size()){
-                }
-                */
-
 
 
                 //ok now we need to store all of that info into the service class as object
