@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="we will work on this V">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+    <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="i finished customer and worker classes !">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/DataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Worker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682423495406</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="i finished customer and worker classes !">
+      <created>1682611197317</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682611197317</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="we will work on this V" />
-    <option name="LAST_COMMIT_MESSAGE" value="we will work on this V" />
+    <MESSAGE value="i finished customer and worker classes !" />
+    <option name="LAST_COMMIT_MESSAGE" value="i finished customer and worker classes !" />
   </component>
 </project>

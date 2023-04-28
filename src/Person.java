@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Person {
@@ -6,7 +7,6 @@ public class Person {
     private String last_name;
     private String Username;
     private String Password;
-    private Order[] orders;
 
     public String getFirst_name() {
         return First_name;
@@ -40,15 +40,15 @@ public class Person {
         this.Password = Password;
     }
 
-    public Person(String First_name, String last_name,String Username, String Password, Order[] orders) {
-        this.First_name = First_name;
+
+
+    public Person(String first_name, String last_name, String username, String password) {
+        First_name = first_name;
         this.last_name = last_name;
-        this.Username = Username;
-        this.Password = Password;
-        this.orders = orders;
+        Username = username;
+        Password = password;
     }
 
-    
     public Person(){
         
     }

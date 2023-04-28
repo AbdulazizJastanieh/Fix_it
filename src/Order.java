@@ -4,6 +4,7 @@ import java.util.Date;
 public class Order {
     private String OID;
     private Customer customer;
+    private Worker worker;
     private Service service;
     private double Total;
     private Date Order_Date;
@@ -36,6 +37,18 @@ public class Order {
         return Total;
     }
 
+    public Worker getWorker() {
+        return worker;
+    }
+
+    public void setWorker(Worker worker) {
+        this.worker = worker;
+    }
+
+    public Order(String OID) {
+        this.OID = OID;
+    }
+
     public void setTotal(double Total) {
         this.Total = Total;
     }
@@ -48,14 +61,15 @@ public class Order {
         this.Order_Date = Order_Date;
     }
 
-    public Order(String OID, Customer customer, Service service, double Total, Date Order_Date) {
+    public Order(String OID, Customer customer, Worker worker, Service service, double total, Date order_Date) {
         this.OID = OID;
         this.customer = customer;
+        this.worker = worker;
         this.service = service;
-        this.Total = Total;
-        this.Order_Date = Order_Date;
+        Total = total;
+        Order_Date = order_Date;
     }
-    
+
     public Order(){
         
     }

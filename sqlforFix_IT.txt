@@ -1,0 +1,103 @@
+CREATE TABLE Customer (
+  CID VARCHAR(255) PRIMARY KEY,
+  first VARCHAR(255) NOT NULL,
+  last VARCHAR(255) NOT NULL,
+  DOB DATE,
+  balance DECIMAL(10, 2),
+  age INT,
+  phone VARCHAR(20),
+  location VARCHAR(255),
+  username VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Worker (
+  WID VARCHAR(255) PRIMARY KEY,
+  first VARCHAR(255) NOT NULL,
+  last VARCHAR(255) NOT NULL,
+  specialty VARCHAR(255),
+  balance DECIMAL(10, 2),
+  phone VARCHAR(20),
+  username VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Service (
+  SID VARCHAR(255) PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  price DECIMAL(10, 2) NOT NULL
+);
+
+CREATE TABLE WorkerService (
+  SID VARCHAR(255),
+  WID VARCHAR(255),
+  PRIMARY KEY (SID, WID),
+  FOREIGN KEY (SID) REFERENCES Service (SID),
+  FOREIGN KEY (WID) REFERENCES Worker (WID)
+);
+
+CREATE TABLE Orders (
+  OID VARCHAR(255) PRIMARY KEY,
+  Date DATE NOT NULL,
+  Total DECIMAL(10, 2) NOT NULL,
+  SID VARCHAR(255),
+  WID VARCHAR(255),
+  CID VARCHAR(255),
+  FOREIGN KEY (SID) REFERENCES Service (SID),
+  FOREIGN KEY (WID) REFERENCES Worker (WID),
+  FOREIGN KEY (CID) REFERENCES Customer (CID)
+);
+
+
+
+
+-- Insert random data into Customer table
+INSERT INTO Customer (CID, first, last, DOB, balance, age, phone, location, username, password)
+VALUES 
+    ('C0001', 'John', 'Doe', '1990-01-01', ROUND(RAND() * 10000, 2), 31, '555-555-5555', 'New York', 'johndoe', 'password123'),
+    ('C0002', 'Jane', 'sans', '1995-02-15', ROUND(RAND() * 10000, 2), 26, '666-666-6666', 'Los Angeles', 'janedoe', 'password456'),
+    ('C0003', 'Bob', 'Smith', '1985-05-20', ROUND(RAND() * 10000, 2), 36, '777-777-7777', 'Chicago', 'bobsmith', 'password789'),
+    ('C0004', 'Alice', 'Johnson', '1992-09-30', ROUND(RAND() * 10000, 2), 29, '888-888-8888', 'Houston', 'alicejohnson', 'passwordabc'),
+    ('C0005', 'Tom', 'Williams', '1998-12-25', ROUND(RAND() * 10000, 2), 23, '999-999-9999', 'Miami', 'tomwilliams', 'passworddef');
+
+-- Insert random data into Worker table
+INSERT INTO Worker (WID, first, last, specialty, balance, phone, username, password)
+VALUES 
+    ('W0001', 'John', 'Smith', 'Plumber', ROUND(RAND() * 10000, 2), '555-555-5555', 'johnsmith', 'password123'),
+    ('W0002', 'Bob', 'Johnson', 'Electrician', ROUND(RAND() * 10000, 2), '666-666-6666', 'bobjohnson', 'password456'),
+    ('W0003', 'Charlie', 'Garcia', 'Carpenter', ROUND(RAND() * 10000, 2), '777-777-7777', 'charliegarcia', 'password789'),
+    ('W0004', 'David', 'Lee', 'Painter', ROUND(RAND() * 10000, 2), '888-888-8888', 'davidlee', 'passwordabc'),
+    ('W0005', 'Emily', 'Wang', 'Handyman', ROUND(RAND() * 10000, 2), '999-999-9999', 'emilywang', 'passworddef');
+
+-- Insert random data into Service table
+INSERT INTO Service (SID, name, price)
+VALUES 
+    ('S0001', 'Plumbing', ROUND(RAND() * 100, 2)),
+    ('S0002', 'Electrical', ROUND(RAND() * 100, 2)),
+    ('S0003', 'Carpentry', ROUND(RAND() * 100, 2)),
+    ('S0004', 'Painting', ROUND(RAND() * 100, 2)),
+    ('S0005', 'Handyman', ROUND(RAND() * 100, 2));
+
+-- Insert random data into WorkerService table
+INSERT INTO WorkerService (SID, WID)
+SELECT 
+    Service.SID, 
+    Worker.WID
+FROM Service, Worker
+WHERE RAND() < 0.5;
+
+-- Insert random data into Orders table
+INSERT INTO Orders (OID, Date, Total, SID, WID, CID)
+VALUES 
+    ('O0001', '2022-01-01', ROUND(RAND() * 1000, 2), 'S0001', 'W0001', 'C0001'),
+    ('O0002', '2022-02-01', ROUND(RAND() * 1000, 2), 'S0002', 'W0002', 'C0002'),
+    ('O0003', '2022-03-01', ROUND(RAND() * 1000, 2), 'S0003', 'W0003', 'C0003'),
+    ('O0004', '2022-04-01', ROUND(RAND() * 1000, 2), 'S0004', 'W0004', 'C0004'),
+    ('O0005', '2022-05-01', ROUND(RAND() * 1000, 2), 'S0005', 'W0005', 'C0005');
+
+
+
+
+
+
+

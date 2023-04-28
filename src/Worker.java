@@ -1,11 +1,13 @@
+//TODO: ADD delete service - ADD getter for orders(also for customer)
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
 public class Worker extends Person{
     private String WID;
     private double Balance;
-    private Customer customer;
-    private Service services[];
+    private ArrayList<Service> services = new ArrayList<Service>();
+    private ArrayList<Order> orders = new ArrayList<Order>();
 
     public String getWID() {
         return WID;
@@ -15,15 +17,15 @@ public class Worker extends Person{
         this.WID = WID;
     }
 
-    @Override
-    public String toString() {
-        return "Worker{" +
-                "WID='" + WID + '\'' +
-                ", Balance=" + Balance +
-                ", customer=" + customer +
-                ", services=" + Arrays.toString(services) +
-                '}';
+    public ArrayList<Service> getServices() {
+        return services;
     }
+
+    public void setServices(Service services) {
+        this.services.add(services);
+    }
+
+
 
     public double getBalance() {
         return Balance;
@@ -33,27 +35,26 @@ public class Worker extends Person{
         this.Balance = Balance;
     }
 
-    public Service[] getServices() {
-        return services;
-    }
 
-    public void setServices(Service[] services) {
-        this.services = services;
-    }
 
-    public Worker(String WID , double Balance , String First_name, String last_name,  String Username, String Password,Customer customer) {
-        super(First_name, last_name,  Username, Password, null);
+    public Worker(String WID , double Balance , String First_name, String last_name,  String Username, String Password) {
+        super(First_name, last_name,  Username, Password);
         this.WID = WID;
         this.Balance = Balance;
-        this.customer =customer;
     }
 
 
-    public Worker(String WID , double Balance, Service[] services, String First_name, String last_name, String Username, String Password, Order[] orders) {
-        super(First_name, last_name,  Username, Password, orders);
-        this.WID = WID;
-        this.Balance = Balance;
-        this.services = services;
+    public void setOrders(Order order) {
+        this.orders.add(order);
+    }
+
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "WID='" + WID + '\'' +
+                ", Balance=" + Balance +
+                ", services=" + services.toString() +
+                '}';
     }
 
     public Worker(){

@@ -2,7 +2,7 @@
 public class Service {
     private String SID;
     private String Name;
-    private int Price;
+    private Double Price;
 
     public String getSID() {
         return SID;
@@ -20,20 +20,26 @@ public class Service {
         this.Name = Name;
     }
 
-    public int getPrice() {
+    public Double getPrice() {
         return Price;
     }
 
-    public void setPrice(int Price) {
+    public void setPrice(Double Price) {
         this.Price = Price;
     }
 
-    public Service(String SID, String Name, int Price) {
+    public Service(String SID, String Name, Double Price ) {
         this.SID = SID;
         this.Name = Name;
         this.Price = Price;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Service{" +
+                "SID='" + SID ;
+    }
+
     public Service(){
         
     }
