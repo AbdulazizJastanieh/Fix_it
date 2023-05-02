@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="_init_ done now the object are load with database info !&#10;&#10;also, I added the sql code for the dataBase">
+    <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="we will work on this V">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IW.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Login_Cus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Login_Wor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Separator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reg_Cus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reg_Wor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wallet.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/DataBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -10,6 +29,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,13 +48,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-j-8.0.33.jar" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/ALI PC/OneDrive/Desktop/Fix_it"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ALI PC\OneDrive\Desktop\Fix_it" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -67,21 +95,7 @@
       <option name="project" value="LOCAL" />
       <updated>1682423495406</updated>
     </task>
-    <task id="LOCAL-00003" summary="i finished customer and worker classes !">
-      <created>1682611197317</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1682611197317</updated>
-    </task>
-    <task id="LOCAL-00004" summary="_init_ done now the object are load with database info !&#10;&#10;also, I added the sql code for the dataBase">
-      <created>1682689990799</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1682689990799</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,8 +111,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="we will work on this V" />
-    <MESSAGE value="i finished customer and worker classes !" />
-    <MESSAGE value="_init_ done now the object are load with database info !&#10;&#10;also, I added the sql code for the dataBase" />
-    <option name="LAST_COMMIT_MESSAGE" value="_init_ done now the object are load with database info !&#10;&#10;also, I added the sql code for the dataBase" />
+    <option name="LAST_COMMIT_MESSAGE" value="we will work on this V" />
   </component>
 </project>
