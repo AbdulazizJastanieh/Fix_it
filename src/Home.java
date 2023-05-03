@@ -6,7 +6,6 @@ import javax.swing.table.DefaultTableModel;
 
 
 public class Home extends JFrame implements ActionListener {
-
     JFrame frame = new JFrame();
     ImageIcon icon = new ImageIcon("logo2.png");
     ImageIcon profile = new ImageIcon("profile.png");
@@ -30,27 +29,36 @@ public class Home extends JFrame implements ActionListener {
 
     JLabel label = new JLabel();
     JLabel label2 = new JLabel("Fix it");
-    JLabel labelprofile = new JLabel("       Name: "+"First "+"Last");
-    JLabel labelprofile2= new JLabel("    Email: "+"222222@22222");
-    JLabel labelprofile3 = new JLabel("        Balance: "+"2222");
-    JLabel labelprofile4 = new JLabel("          DOB: "+"22-2-2022");
-    JLabel labelprofile5 = new JLabel("       Location: "+"Jeddah");
-    JLabel labelorder = new JLabel("oooooooo: "+"Jeddah");
-    JLabel labelwallet = new JLabel("wwwwww: "+"Jeddah");
+    JLabel labelprofile = new JLabel();
+    JLabel labelprofile2= new JLabel(); //can't delete scared to make code not work
+    JLabel labelprofile3 = new JLabel();
+    JLabel labelprofile4 = new JLabel();
+    JLabel labelprofile5 = new JLabel();
+    JLabel labelorder = new JLabel(); //can't delete scared to make code not work
+    JLabel labelwallet = new JLabel(); //can't delete scared to make code not work
     JButton button = new JButton();
     JButton button2 = new JButton();
     JButton button3 = new JButton();
     JButton button4 = new JButton();
 
 
-    Home(){
+    Home(Customer customer){
+
+        labelprofile = new JLabel("       Name: "+customer.getFirst_name()+" "+customer.getLast_name());
+        labelprofile3 = new JLabel("        Balance: "+customer.getBalance());
+        labelprofile4 = new JLabel("          DOB: "+customer.getDate_of_Birth());
+        labelprofile5 = new JLabel("       Location: "+customer.getLocation());
+
+
+
+
         label.setIcon(icon);
         label.setHorizontalTextPosition(JLabel.CENTER);
         label2.setFont(new Font(null,Font.PLAIN,100));
         label2.setForeground(new Color(232, 214, 162));
         labelprofile.setBounds(200,175,20,20);
         labelprofile.setFont(new Font(null,Font.PLAIN,30));
-        labelprofile2.setVerticalTextPosition(JLabel.BOTTOM);
+        labelprofile2.setVerticalTextPosition(JLabel.BOTTOM); // ??????
         labelprofile2.setFont(new Font(null,Font.PLAIN,30));
         labelprofile3.setBounds(200,295,20,20);
         labelprofile3.setFont(new Font(null,Font.PLAIN,30));
@@ -93,17 +101,33 @@ public class Home extends JFrame implements ActionListener {
         model.addColumn("Service");
         model.addColumn("Price");
         model.addRow(new Object[]{"Service ID","Service name","Price"});
-        model.addRow(new Object[]{"ww","ee","rr","qq"});
+        int i = 0; //to scan the service array
+        System.out.println(Main.ServiceArray.size());
+        while (i<Main.ServiceArray.size()){ //while service array isn't empty
+            String SID =  Main.ServiceArray.get(i).getSID(); //get sid
+            String name =  Main.ServiceArray.get(i).getName(); // get service name
+            Double price =  Main.ServiceArray.get(i).getPrice(); //get service price
+            model.addRow(new Object[]{SID,name,price}); //add it to the table
+            i++; //go to the next service
+        }
         jTable1.setPreferredSize(new Dimension(400, 400)); // set preferred size to 400 x 400 pixels
         jTable2.setPreferredSize(new Dimension(400, 400)); // set preferred size to 400 x 400 pixels
 
 
 
-        model2.addColumn("CID");
+        model2.addColumn("WID");
         model2.addColumn("Name");
-        model2.addColumn("Phone");
-        model.addRow(new Object[]{"Service","Price","Worker name","Worker Rate"});
-        model2.addRow(new Object[]{"5","6","7"});
+        model2.addRow(new Object[]{"WID","Name"});
+
+        i = 0; //to scan the worker array
+        while (i<Main.WorkerArray.size()){ //while service array isn't empty
+            String WID =  Main.WorkerArray.get(i).getWID(); //get wid
+            String first =  Main.WorkerArray.get(i).getFirst_name(); // get worker first name
+            String last =  Main.WorkerArray.get(i).getLast_name(); //get worker last name
+            String name = first +" "+ last ; //get the name
+            model2.addRow(new Object[]{WID,name}); //add it to the table
+            i++; //go to the next worker
+        }
 
         jTable1.setDefaultEditor(Object.class, null); //make the table cannot be edited
         jTable1.setModel(model); //make the table visiable (set the model for the table)

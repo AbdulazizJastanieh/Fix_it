@@ -86,17 +86,25 @@ public class Login_Cus extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (e.getSource()==button) {
+        if (e.getSource()==button) { //this is for altsgil page
             frame.dispose();
             new reg_Cus();
         }
 
         if (e.getSource()==button2){
-            frame.dispose();
-            new Home();
+            String username = text.getText();
+            String pass = text2.getText();
+            Customer customer = Customer.LoginCustomer(username,pass);
+            if(Customer.LoginCustomer(username,pass) != null) {
+                new Home(customer);
+            }
+            else{
+                new IW(); //warning massage !
+            }
         }
 
 
 
     }
+
 }

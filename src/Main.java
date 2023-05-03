@@ -11,14 +11,14 @@ public class Main {
         ArrayList<ArrayList> allA= DataBase._init_(); //load all the info from the database and put it in allA
         CustomerArray = allA.get(0); //store the customer objects (work with this)
         WorkerArray = allA.get(1); //store the worker objects (work with this)
-        OrderArray = allA.get(2); //store the order objects (work with this)
-        ServiceArray = allA.get(3); //store the service objects (work with this)
+        ServiceArray = allA.get(2); //store the service objects (work with this)
+        OrderArray = allA.get(3); //store the order objects (work with this)
         //END OF _init_ ****************************************************************************************************************************
 
         //--------------
         //Gui
 
-        new Home();
+        new Home(CustomerArray.get(1));
         //--------------
     }
 }

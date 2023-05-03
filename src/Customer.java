@@ -14,6 +14,10 @@ public class Customer extends Person {
     private int age;
     private ArrayList<Order> orders = new ArrayList<Order>();
 
+    public Date getDate_of_Birth() {
+        return Date_of_Birth;
+    }
+
     public String getCID() {
         return CID;
     }

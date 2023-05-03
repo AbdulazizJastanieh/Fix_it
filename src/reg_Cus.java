@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class reg_Cus extends JFrame implements ActionListener {
-
     JFrame frame = new JFrame();
     JPanel panel = new JPanel();
     JLabel label = new JLabel();
