@@ -7,6 +7,7 @@ public class Person {
     private String last_name;
     private String Username;
     private String Password;
+    private String Phone_Number;
 
     public String getFirst_name() {
         return First_name;
@@ -42,11 +43,13 @@ public class Person {
 
 
 
-    public Person(String first_name, String last_name, String username, String password) {
+    public Person(String first_name, String last_name,String Phone_Number, String username, String password) {
         First_name = first_name;
         this.last_name = last_name;
+        this.Phone_Number = Phone_Number;
         Username = username;
         Password = password;
+
     }
 
     public Person(){

@@ -54,7 +54,7 @@ public class DataBase{
                 String cloc = RS.getString(8);
                 String cusername = RS.getString(9);
                 String cpassword = RS.getString(10);
-                Customer tempCustoemr = new Customer(CID,cloc,balance,cfname,clname,age,cdate,cusername,cpassword); //make new arrraylist then store it !
+                Customer tempCustoemr = new Customer(CID,cfname,clname,cdate,balance,age,cnumber,cloc,cusername,cpassword); //make new arrraylist then store it !
                 customerArrayList.add(tempCustoemr);
             }
             RS.close();
@@ -75,7 +75,7 @@ public class DataBase{
 
 
             //ok now we need to store all of that info into the worker class as object
-                Worker tempWorker = new Worker(WID,balance,wfname,wlname,wusername,wpassword);
+                Worker tempWorker = new Worker(WID,wfname,wlname,specialty,balance,wnumber,wusername,wpassword);
                 workerArrayList.add(tempWorker);
             }
             RS2.close();
