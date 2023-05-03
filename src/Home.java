@@ -89,13 +89,20 @@ public class Home extends JFrame implements ActionListener {
         cl.show(panelcont,"1");
 
 
-        model.addColumn("CID");
-        model.addColumn("Name");
-        model.addColumn("Phone");
-        model.addRow(new Object[]{"1","2","3"});
+        model.addColumn("Service ID");
+        model.addColumn("Service");
+        model.addColumn("Price");
+        model.addRow(new Object[]{"Service ID","Service name","Price"});
+        model.addRow(new Object[]{"ww","ee","rr","qq"});
+        jTable1.setPreferredSize(new Dimension(400, 400)); // set preferred size to 400 x 400 pixels
+        jTable2.setPreferredSize(new Dimension(400, 400)); // set preferred size to 400 x 400 pixels
+
+
+
         model2.addColumn("CID");
         model2.addColumn("Name");
         model2.addColumn("Phone");
+        model.addRow(new Object[]{"Service","Price","Worker name","Worker Rate"});
         model2.addRow(new Object[]{"5","6","7"});
 
         jTable1.setDefaultEditor(Object.class, null); //make the table cannot be edited

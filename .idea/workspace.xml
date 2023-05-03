@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="GUI classes">
+    <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="we will work on this V">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_16_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_16_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_24_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_24_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_52_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_52_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/DataBase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Home.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Login_Cus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Login_Cus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Login_Wor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Login_Wor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Worker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login_Cus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_Cus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login_Wor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_Wor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,15 +20,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,16 +31,6 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ALI PC/OneDrive/Desktop/Fix_it&quot;
-  }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ALI PC\OneDrive\Desktop\Fix_it" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
