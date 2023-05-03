@@ -88,12 +88,12 @@ public class Login_Cus extends JFrame implements ActionListener {
 
         if (e.getSource()==button) {
             frame.dispose();
-            reg_Cus cus = new reg_Cus();
+            new reg_Cus();
         }
 
         if (e.getSource()==button2){
             frame.dispose();
-            Home h = new Home();
+            new Home();
         }
 
 

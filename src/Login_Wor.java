@@ -88,7 +88,7 @@ public class Login_Wor extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==button) {
             frame.dispose();
-            reg_Wor wor = new reg_Wor();
+             new reg_Wor();
         }
 
     }
