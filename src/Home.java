@@ -6,6 +6,7 @@ import javax.swing.table.DefaultTableModel;
 
 
 public class Home extends JFrame implements ActionListener{
+    Customer customer;
 
     /*
     JFrame frame = new JFrame();
@@ -256,6 +257,7 @@ public class Home extends JFrame implements ActionListener{
 
 
     Home(Customer customer) {
+        this.customer = customer;
 
         panel.setBounds(0, 0, 150, 125);
         panel.setBackground(new Color(70, 97, 61));

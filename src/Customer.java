@@ -75,15 +75,48 @@ public class Customer extends Person {
                 '}';
     }
 
-    public static void RegisterCustomer(String CID, String First_name, String last_name, Date Date_of_Birth, double Balance,  int age,String Phone_Number, String Location, String Username, String Password) throws SQLException {
+    public static void RegisterCustomer( String First_name, String last_name, Date Date_of_Birth, int age,String Phone_Number, String Location, String Username, String Password) throws SQLException {
         /* this method will do the following :
             1- create a new Customer object.
             2- store that object into the arraylist of Customers.
             3- create a new record in the database that represent the new object.
          */
 
+        Customer lastCustomer = Main.CustomerArray.get(Main.CustomerArray.size() - 1 );
 
-        Customer NewCustomer = new Customer(CID,First_name,last_name,Date_of_Birth,Balance,age,Phone_Number,Location,Username,Password);
+        //now we have a reference to the last customer. now we just need to figure his CID and add one to it.
+
+        String LCustomerID = lastCustomer.getCID();
+        //worker id of the last customer.
+
+        String LCustomerNum = LCustomerID.substring(1);
+        //the last customer number.
+
+        int Lwcustomernum = Integer.parseInt(LCustomerNum);
+
+        int Ncustomernum = Lwcustomernum + 1;
+        //the new customer number is the last worker number + 1
+
+        String NcustomerID;
+
+        if (Ncustomernum < 10) {
+            NcustomerID = "C000" + Ncustomernum;
+        }
+        else if (Ncustomernum < 99) {
+            NcustomerID = "C00" + Ncustomernum;
+        }
+        else if (Ncustomernum < 999)
+        {
+            NcustomerID = "C0" + Ncustomernum;
+        }
+        else {
+            NcustomerID = "C" + Ncustomernum;
+        }
+        //here we are done making the New Customer id for the customer.
+
+
+
+        Customer NewCustomer = new Customer(NcustomerID,First_name,last_name,Date_of_Birth,200,age,Phone_Number,Location,Username,Password);
 
         //here we create the object.
 
@@ -104,11 +137,11 @@ public class Customer extends Person {
         //here I make a String that represent the DateofBirth and then I put it into the query
 
         String query = "INSERT INTO Customer VALUES (";
-        query += "'" + CID + "'" + ",";
+        query += "'" + NcustomerID + "'" + ",";
         query += "'" + First_name + "'" + ",";
         query += "'" + last_name + "'" + ",";
         query += "'" + formattedDate + "'" + ",";
-        query +=  Balance  + ",";
+        query +=  200  + ",";
         query += "'" + age + "'" + ",";
         query += "'" + Phone_Number + "'" + ",";
         query += "'" + Location + "'" + ",";

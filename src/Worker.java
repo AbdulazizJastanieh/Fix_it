@@ -66,15 +66,50 @@ public class Worker extends Person{
         super();
     }
 
-    public static void RegisterWorker(String WID , String First_name, String last_name, String speciality, double Balance ,  String Phone_Number,  String Username, String Password) throws SQLException {
+    public static void RegisterWorker(String First_name, String last_name, String speciality, String Phone_Number,  String Username, String Password) throws SQLException {
         /* this method will do the following :
             1- create a new worker object.
             2- store that object into the arraylist of workers.
             3- create a new record in the database that represent the new object.
          */
+        //the object's balance will be a fixed amount for now.
+
+        //the WID needs to be in order. so we have to obtain the last WID from the arraylist and add one to it.
+
+        Worker lastWorker = Main.WorkerArray.get(Main.WorkerArray.size() - 1 );
+
+        //now we have a reference to the last worker. now we just need to figure his WID and add one to it.
+
+        String LworkerID = lastWorker.getWID();
+        //worker id of the last worker.
+
+        String LworkerNum = LworkerID.substring(1);
+        //the last worker number.
+
+        int Lworkernum = Integer.parseInt(LworkerNum);
+
+        int Nworkernum = Lworkernum + 1;
+        //the new worker number is the last worker number + 1
+
+        String NworkerID;
+
+        if (Nworkernum < 10) {
+            NworkerID = "W000" + Nworkernum;
+        }
+        else if (Nworkernum < 99) {
+            NworkerID = "W00" + Nworkernum;
+        }
+            else if (Nworkernum < 999)
+            {
+                NworkerID = "W0" + Nworkernum;
+            }
+            else {
+            NworkerID = "W" + Nworkernum;
+        }
+            //here we are done making the New worker id for the worker.
 
 
-        Worker NewWorker = new Worker(WID,First_name,last_name,speciality,Balance,Phone_Number,Username,Password);
+        Worker NewWorker = new Worker(NworkerID,First_name,last_name,speciality,0,Phone_Number,Username,Password);
 
         //here we create the object.
 
@@ -91,11 +126,11 @@ public class Worker extends Person{
         //now we are connected to our database. now we can execute queries.
 
         String query = "INSERT INTO Worker VALUES (";
-        query += "'" + WID + "'" + ",";
+        query += "'" + NworkerID + "'" + ",";
         query += "'" + First_name + "'" + ",";
         query += "'" + last_name + "'" + ",";
         query += "'" + speciality + "'" + ",";
-        query +=  Balance  + ",";
+        query +=  0  + ",";
         query += "'" + Phone_Number + "'" + ",";
         query += "'" + Username + "'" + ",";
         query += "'" + Password + "'" + ")";
@@ -129,7 +164,7 @@ public class Worker extends Person{
     }
 
 
-    public static void AddService(Worker worker, String SID){
+    public static void AddService(Worker worker, String SID) throws SQLException {
         //this method will add a service to the arraylist of services in the worker object.
 
         Service service = null;
@@ -146,6 +181,20 @@ public class Worker extends Person{
 
         worker.services.add(service);
         //and here we add the service to the worker service arraylist.
+
+        Connection conn = DataBase.connect();
+        Statement s = conn.createStatement(); //create statement
+        s.execute("USE sql8614265"); //to use this database (we only have 1 database in the server)
+
+        String query = "";
+        query +=  "insert into servicelist (SID, WID) values ";
+        query += "(" + "'" + SID + "'" + ", " + "'" + worker.getWID() + "'" + ")";
+
+
+        s.executeQuery(query);
+
+        //here we added the service to the servicelist table.
+
     }
 
 
