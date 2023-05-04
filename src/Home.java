@@ -5,13 +5,11 @@ import java.awt.event.ActionListener;
 import javax.swing.table.DefaultTableModel;
 
 
-public class Home extends JFrame implements ActionListener {
+public class Home extends JFrame implements ActionListener{
+
+    /*
     JFrame frame = new JFrame();
-    ImageIcon icon = new ImageIcon("logo2.png");
-    ImageIcon profile = new ImageIcon("profile.png");
-    ImageIcon wallet = new ImageIcon("wallet.png");
-    ImageIcon orders = new ImageIcon("orders.png");
-    ImageIcon services = new ImageIcon("services.png");
+
     DefaultTableModel model = new DefaultTableModel();
     DefaultTableModel model2 = new DefaultTableModel();
 
@@ -23,6 +21,7 @@ public class Home extends JFrame implements ActionListener {
     JPanel panelcont = new JPanel();
     JPanel panelin1 = new JPanel();
     JPanel panelin2 = new JPanel();
+    JPanel panel2v2 = new JPanel();
     JPanel panelin3 = new JPanel();
     JPanel panelin4 = new JPanel();
     CardLayout cl = new CardLayout();
@@ -36,10 +35,14 @@ public class Home extends JFrame implements ActionListener {
     JLabel labelprofile5 = new JLabel();
     JLabel labelorder = new JLabel(); //can't delete scared to make code not work
     JLabel labelwallet = new JLabel(); //can't delete scared to make code not work
-    JButton button = new JButton();
-    JButton button2 = new JButton();
-    JButton button3 = new JButton();
-    JButton button4 = new JButton();
+    JButton profilebutton = new JButton();
+    JButton servicesebutton = new JButton();
+    JButton orderbutton = new JButton();
+    JButton walletbutton = new JButton();
+
+    JTextField choosingservice = new JTextField();
+    JTextField choosingworker = new JTextField();
+
 
 
     Home(Customer customer){
@@ -83,6 +86,8 @@ public class Home extends JFrame implements ActionListener {
         panelin1.setBackground(new Color(232, 214, 162));
         panelin2.setBounds(150, 125, 550, 675);
         panelin2.setBackground(new Color(232, 214, 162));
+        panel2v2.setBounds(550, 475, 550, 200);
+        panel2v2.setBackground(new Color(225, 0, 0));
         panelin3.setBounds(150, 125, 550, 675);
         panelin3.setBackground(new Color(232, 214, 162));
         panelin4.setBounds(150, 125, 550, 675);
@@ -136,49 +141,49 @@ public class Home extends JFrame implements ActionListener {
         jTable2.setModel(model2); //make the table visiable (set the model for the table)
 
 
-        button.setText("profile");
-        button.setBackground(new Color(70, 97, 61));
-        button.setForeground(new Color(245, 245, 245));
-        button.setFocusable(false);
-        button.addActionListener(this);
-        button.setIcon(profile);
-        button.setBounds(20,30,100,100);
-        button.setVerticalTextPosition(JButton.BOTTOM);
-        button.setHorizontalTextPosition(JButton.CENTER);
-        button.addActionListener(this);
+        profilebutton.setText("profile");
+        profilebutton.setBackground(new Color(70, 97, 61));
+        profilebutton.setForeground(new Color(245, 245, 245));
+        profilebutton.setFocusable(false);
+        profilebutton.addActionListener(this);
+        profilebutton.setIcon(profile);
+        profilebutton.setBounds(20,30,100,100);
+        profilebutton.setVerticalTextPosition(JButton.BOTTOM);
+        profilebutton.setHorizontalTextPosition(JButton.CENTER);
+        profilebutton.addActionListener(this);
 
-        button2.setText("services");
-        button2.setBackground(new Color(70, 97, 61));
-        button2.setForeground(new Color(245, 245, 245));
-        button2.setFocusable(false);
-        button2.addActionListener(this);
-        button2.setIcon(services);
-        button2.setBounds(20,150,100,100);
-        button2.setVerticalTextPosition(JButton.BOTTOM);
-        button2.setHorizontalTextPosition(JButton.CENTER);
-        button2.addActionListener(this);
+        servicesebutton.setText("services");
+        servicesebutton.setBackground(new Color(70, 97, 61));
+        servicesebutton.setForeground(new Color(245, 245, 245));
+        servicesebutton.setFocusable(false);
+        servicesebutton.addActionListener(this);
+        servicesebutton.setIcon(services);
+        servicesebutton.setBounds(20,150,100,100);
+        servicesebutton.setVerticalTextPosition(JButton.BOTTOM);
+        servicesebutton.setHorizontalTextPosition(JButton.CENTER);
+        servicesebutton.addActionListener(this);
 
-        button3.setText("orders");
-        button3.setBackground(new Color(70, 97, 61));
-        button3.setForeground(new Color(245, 245, 245));
-        button3.setFocusable(false);
-        button3.addActionListener(this);
-        button3.setIcon(orders);
-        button3.setBounds(20,270,100,100);
-        button3.setVerticalTextPosition(JButton.BOTTOM);
-        button3.setHorizontalTextPosition(JButton.CENTER);
-        button3.addActionListener(this);
+        orderbutton.setText("orders");
+        orderbutton.setBackground(new Color(70, 97, 61));
+        orderbutton.setForeground(new Color(245, 245, 245));
+        orderbutton.setFocusable(false);
+        orderbutton.addActionListener(this);
+        orderbutton.setIcon(orders);
+        orderbutton.setBounds(20,270,100,100);
+        orderbutton.setVerticalTextPosition(JButton.BOTTOM);
+        orderbutton.setHorizontalTextPosition(JButton.CENTER);
+        orderbutton.addActionListener(this);
 
-        button4.setText("wallet");
-        button4.setBackground(new Color(70, 97, 61));
-        button4.setForeground(new Color(245, 245, 245));
-        button4.setFocusable(false);
-        button4.addActionListener(this);
-        button4.setIcon(wallet);
-        button4.setBounds(20,390,100,100);
-        button4.setVerticalTextPosition(JButton.BOTTOM);
-        button4.setHorizontalTextPosition(JButton.CENTER);
-        button4.addActionListener(this);
+        walletbutton.setText("wallet");
+        walletbutton.setBackground(new Color(70, 97, 61));
+        walletbutton.setForeground(new Color(245, 245, 245));
+        walletbutton.setFocusable(false);
+        walletbutton.addActionListener(this);
+        walletbutton.setIcon(wallet);
+        walletbutton.setBounds(20,390,100,100);
+        walletbutton.setVerticalTextPosition(JButton.BOTTOM);
+        walletbutton.setHorizontalTextPosition(JButton.CENTER);
+        walletbutton.addActionListener(this);
 
         frame.setLayout(null);
         frame.setTitle("Fix it");
@@ -189,10 +194,10 @@ public class Home extends JFrame implements ActionListener {
         frame.getContentPane().setBackground(new Color(232, 214, 162));
         frame.setIconImage(icon.getImage());
         panel.add(label);
-        panel3.add(button);
-        panel3.add(button2);
-        panel3.add(button3);
-        panel3.add(button4);
+        panel3.add(profilebutton);
+        panel3.add(servicesebutton);
+        panel3.add(orderbutton);
+        panel3.add(walletbutton);
         panel2.add(label2);
         panelin1.add(labelprofile);
         panelin1.add(labelprofile2);
@@ -212,18 +217,149 @@ public class Home extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if(e.getSource() == button){
+        if(e.getSource() == profilebutton){
             cl.show(panelcont,"1");
         }
-        if(e.getSource() == button2){
+        if(e.getSource() == servicesebutton){
             cl.show(panelcont,"2");
         }
-        if(e.getSource() == button3){
+        if(e.getSource() == orderbutton){
             cl.show(panelcont,"3");
         }
-        if(e.getSource() == button4){
+        if(e.getSource() == walletbutton){
             cl.show(panelcont,"4");
         }
 
+    }
+
+     */
+
+    JFrame frame = new JFrame();
+    JFrame frameprofile = new JFrame();
+
+    ImageIcon icon = new ImageIcon("logo2.png");
+    ImageIcon profile = new ImageIcon("profile.png");
+    ImageIcon wallet = new ImageIcon("wallet.png");
+    ImageIcon orders = new ImageIcon("order.png");
+    ImageIcon services = new ImageIcon("service.png");
+
+    JLabel label = new JLabel();
+    JLabel label2 = new JLabel("Fix it");
+
+    JPanel panel = new JPanel();
+    JPanel panel2 = new JPanel();
+    JButton profilebutton = new JButton();
+    JButton servicesebutton = new JButton();
+    JButton orderbutton = new JButton();
+    JButton walletbutton = new JButton();
+
+
+
+    Home(Customer customer) {
+
+        panel.setBounds(0, 0, 150, 125);
+        panel.setBackground(new Color(70, 97, 61));
+        panel2.setBounds(150,0,550,125);
+        panel2.setBackground(new Color(76, 102, 67));
+
+        label.setIcon(icon);
+        label.setHorizontalTextPosition(JLabel.CENTER);
+        label2.setFont(new Font(null,Font.PLAIN,100));
+        label2.setForeground(new Color(232, 214, 162));
+
+        profilebutton.setText("profile");
+        profilebutton.setBackground(new Color(70, 97, 61));
+        profilebutton.setForeground(new Color(245, 245, 245));
+        profilebutton.setFont(new Font(null,Font.PLAIN,30));
+        profilebutton.setFocusable(false);
+        profilebutton.setIcon(profile);
+        profilebutton.setBounds(130,225,200,200);
+        profilebutton.setVerticalTextPosition(JButton.BOTTOM);
+        profilebutton.setHorizontalTextPosition(JButton.CENTER);
+        profilebutton.addActionListener(this);
+
+        servicesebutton.setText("services");
+        servicesebutton.setBackground(new Color(70, 97, 61));
+        servicesebutton.setForeground(new Color(245, 245, 245));
+        servicesebutton.setFont(new Font(null,Font.PLAIN,30));
+        servicesebutton.setFocusable(false);
+        servicesebutton.setIcon(services);
+        servicesebutton.setBounds(390,225,200,200);
+        servicesebutton.setVerticalTextPosition(JButton.BOTTOM);
+        servicesebutton.setHorizontalTextPosition(JButton.CENTER);
+        servicesebutton.addActionListener(this);
+
+        orderbutton.setText("orders");
+        orderbutton.setBackground(new Color(70, 97, 61));
+        orderbutton.setForeground(new Color(245, 245, 245));
+        orderbutton.setFont(new Font(null,Font.PLAIN,30));
+        orderbutton.setFocusable(false);
+        orderbutton.setIcon(orders);
+        orderbutton.setBounds(130,485,200,200);
+        orderbutton.setVerticalTextPosition(JButton.BOTTOM);
+        orderbutton.setHorizontalTextPosition(JButton.CENTER);
+        orderbutton.addActionListener(this);
+
+        walletbutton.setText("wallet");
+        walletbutton.setBackground(new Color(70, 97, 61));
+        walletbutton.setForeground(new Color(245, 245, 245));
+        walletbutton.setFont(new Font(null,Font.PLAIN,30));
+        walletbutton.setFocusable(false);
+        walletbutton.setIcon(wallet);
+        walletbutton.setBounds(390,485,200,200);
+        walletbutton.setVerticalTextPosition(JButton.BOTTOM);
+        walletbutton.setHorizontalTextPosition(JButton.CENTER);
+        walletbutton.addActionListener(this);
+
+
+
+
+
+        frame.setLayout(null);
+        frame.setTitle("Fix it");
+        frame.setSize(700, 800);
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.getContentPane().setBackground(new Color(232, 214, 162));
+        frame.setIconImage(icon.getImage());
+        panel.add(label);
+        panel2.add(label2);
+        frame.add(panel);
+        frame.add(panel2);
+        frame.add(profilebutton);
+        frame.add(servicesebutton);
+        frame.add(orderbutton);
+        frame.add(walletbutton);
+
+
+
+    }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+        if(e.getSource() == profilebutton){
+
+
+
+            frameprofile.setLayout(null);
+            frameprofile.setTitle("Fix it");
+            frameprofile.setSize(700, 800);
+            frameprofile.setResizable(false);
+            frameprofile.setVisible(true);
+            frameprofile.getContentPane().setBackground(new Color(232, 214, 162));
+            frameprofile.setIconImage(icon.getImage());
+            
+            
+            
+        } else if (e.getSource() == servicesebutton) {
+            
+        } else if (e.getSource() == orderbutton) {
+            
+        } else if (e.getSource() == walletbutton) {
+            
+        }
     }
 }

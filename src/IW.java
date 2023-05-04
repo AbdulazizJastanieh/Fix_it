@@ -15,7 +15,6 @@ public class IW extends JFrame {
         frame.setTitle("Fix it");
         frame.setSize(400, 200);
         frame.setResizable(false);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.getContentPane().setBackground(new Color(232, 214, 162));
         frame.setIconImage(icon.getImage());

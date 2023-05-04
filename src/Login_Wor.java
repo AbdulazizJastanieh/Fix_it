@@ -5,32 +5,45 @@ import java.awt.event.ActionListener;
 
 public class Login_Wor extends JFrame implements ActionListener {
 
+    // creating frame, buttons, labels, and images objects
+
+    //frame
     JFrame frame = new JFrame();
+
+    //panel
     JPanel panel = new JPanel();
 
+    //labels
     JLabel label = new JLabel();
     JLabel label2 = new JLabel("Don't have an account?");
     JLabel label3 = new JLabel("Already have an account?");
     JLabel label4 = new JLabel("Email");
     JLabel label5 = new JLabel("Password");
     JLabel label6 = new JLabel("Welcome Worker");
+
+    //images
     ImageIcon image = new ImageIcon("logo.png");
     ImageIcon icon = new ImageIcon("logo.png");
+
+    //buttons
     JButton button = new JButton();
     JButton button2 = new JButton();
+
+    //text fields
     TextField text = new TextField();
     TextField text2 = new TextField();
 
     Login_Wor() {
 
+        //text fields settings
         text.setBounds(500, 515, 200, 20);
         text2.setBounds(500, 565, 200, 20);
 
-
+        //panels settings
         panel.setBounds(0, 0, 1000, 400);
         panel.setBackground(new Color(70, 97, 61));
 
-
+        //labels settings
         label.setIcon(image);
         label.setText("Want to join our community?");
         label.setHorizontalTextPosition(JLabel.CENTER);
@@ -46,7 +59,7 @@ public class Login_Wor extends JFrame implements ActionListener {
         label6.setBounds(360,435,300,50);
         label6.setFont(new Font("",Font.PLAIN,30));
 
-
+        //buttons settings
         button.setBounds(350, 680, 100, 50);
         button.setText("Register");
         button.setBackground(new Color(70, 97, 61));
@@ -61,7 +74,7 @@ public class Login_Wor extends JFrame implements ActionListener {
         button2.addActionListener(this);
 
 
-
+        //frame setting and adding buttons, labels, panels, and text fields
         frame.setLayout(null);
         frame.setTitle("Fix it");
         frame.setSize(1000, 800);
@@ -70,7 +83,11 @@ public class Login_Wor extends JFrame implements ActionListener {
         frame.setVisible(true);
         frame.getContentPane().setBackground(new Color(232, 214, 162));
         frame.setIconImage(icon.getImage());
+
+        // adding to the panel
         panel.add(label);
+
+        // adding to the frame
         frame.add(panel);
         frame.add(button);
         frame.add(button2);

@@ -5,22 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="GUI classes">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_16_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_16_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_24_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_24_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_52_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_25_2023_2_52_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/DataBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/IW.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/IW.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Login_Cus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Login_Cus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Login_Wor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Login_Wor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Worker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Separator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Separator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/reg_Cus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/reg_Cus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/reg_Wor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/reg_Wor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/profile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IW.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login_Cus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_Cus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login_Wor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_Wor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Separator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Separator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reg_Cus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reg_Cus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reg_Wor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reg_Wor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallet.png" beforeDir="false" afterPath="$PROJECT_DIR$/wallet.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +60,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ALI PC\OneDrive\Desktop\Fix_it" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager">
