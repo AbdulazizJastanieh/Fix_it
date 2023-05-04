@@ -211,6 +211,34 @@ public class Worker extends Person{
 
     }
 
+    public static ArrayList<Worker> WorkersBySID(String SID){
+        //this method will return an arraylist that contains  all the workers who offer a certain service.
+
+        ArrayList<Worker> workers = new ArrayList<Worker>();
+
+        for (Worker worker : Main.WorkerArray){
+            //this for loop will iterate over every worker.
+
+            for (Service service : worker.getServices()){
+                //this loop will iterate over every service that the current worker provides.
+
+                if (service.getSID().equals(SID)){
+                    workers.add(worker);
+                }
+
+            }
+        }
+        //after finishing both for loops we have done the following:
+        //we iterated over every worker. then we iterated over every service that worker provides.
+        //and we checked every service that the worker provides. and if we find a service with the same SID
+        //as the service we want. then that means that worker provides a service that we want.
+        //and so we add that worker to the new arraylist "workers".
+
+
+        return workers;
+
+    }
+
 
 
 }
