@@ -89,7 +89,6 @@ public class Order {
 
         Worker worker= null;
         Service service = null;
-
         for (Worker workertemp: Main.WorkerArray){
             //here we iterate over every worker.
             if (workertemp.getWID().equals(WID)) {
@@ -193,8 +192,8 @@ public class Order {
         //here we updated the balances of the customer and the worker.
         //now we need to update the worker record and the customer record.
 
-        String query2 = "update customer set balance = "+ customer.getBalance() + "where CID = "+ customer.getCID();
-        String query3 = "update worker set balance = "+ worker.getBalance() + "where WID = "+ worker.getWID();
+        String query2 = "update Customer set balance = "+ customer.getBalance() + " where CID = "+ "'"+ customer.getCID()+ "'";
+        String query3 = "update Worker set balance = "+ worker.getBalance() + " where WID = "+ "'"+ worker.getWID()+ "'";
 
         s.execute(query2);
         s.execute(query3);
