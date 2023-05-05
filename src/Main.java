@@ -18,7 +18,7 @@ public class Main {
         //--------------
         //Gui
 
-        new reg_Cus();
+        new Home(CustomerArray.get(2));
         //--------------
     }
 }

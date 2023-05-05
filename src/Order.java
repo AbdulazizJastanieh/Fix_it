@@ -177,7 +177,7 @@ public class Order {
         query += "'" + order.getService().getSID() + "'" + ",";
         query += "'" + order.getWorker().getWID() + "'" + ")";
 
-        s.executeQuery(query);
+        s.execute(query);
 
         //here we execute the query that we were assembling. this should add the object as a record to the database.
 
@@ -195,8 +195,8 @@ public class Order {
         String query2 = "update customer set balance = "+ customer.getBalance() + "where CID = "+ customer.getCID();
         String query3 = "update worker set balance = "+ worker.getBalance() + "where WID = "+ worker.getWID();
 
-        s.executeQuery(query2);
-        s.executeQuery(query3);
+        s.execute(query2);
+        s.execute(query3);
 
         //here we are done making the changes to the database.
 

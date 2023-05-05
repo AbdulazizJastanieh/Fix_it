@@ -205,11 +205,11 @@ public class Home extends JFrame implements ActionListener{
 
         } else if (e.getSource() == servicesebutton) {
 
-            new Choose_service();
+            new Choose_service(cus);
             
         } else if (e.getSource() == orderbutton) {
 
-            new OrdersList();
+            new OrdersList(cus);
             
         } else if (e.getSource() == walletbutton) {
 
