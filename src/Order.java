@@ -175,7 +175,8 @@ public class Order {
         query += "'" + formattedDate + "'" + ",";
         query += order.getTotal() + ",";
         query += "'" + order.getService().getSID() + "'" + ",";
-        query += "'" + order.getWorker().getWID() + "'" + ")";
+        query += "'" + order.getWorker().getWID() + "'" + ",";
+        query += "'" + order.getCustomer().getCID() + "'" + ")";
 
         s.execute(query);
 
