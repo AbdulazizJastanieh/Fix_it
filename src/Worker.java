@@ -31,7 +31,9 @@ public class Worker extends Person{
     public void setServices(Service services) {
         this.services.add(services);
     }
-
+    public String getPhone(){
+        return super.getPhone_Number();
+    }
 
 
     public double getBalance() {
