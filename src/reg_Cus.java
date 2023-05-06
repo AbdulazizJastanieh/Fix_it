@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.Year;
 import java.util.Date;
 
 public class reg_Cus extends JFrame implements ActionListener {
@@ -132,7 +133,7 @@ public class reg_Cus extends JFrame implements ActionListener {
                int day = Integer.parseInt(text4.getText());
                int month = Integer.parseInt(text5.getText());
                int year = Integer.parseInt(text6.getText());
-               Date DOB = new Date(day,month,year);
+               Date DOB = new Date(year-1900,month-1,day);
                Date currentDate = new Date(); // Get the current date
                long diffInMillies = Math.abs(currentDate.getTime() - DOB.getTime()); // Calculate the difference between the current date and the date of birth in milliseconds
 

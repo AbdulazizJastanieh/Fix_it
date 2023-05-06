@@ -34,7 +34,8 @@ public class OrdersList extends JFrame {
         model.addColumn("Service Name");
         model.addColumn("TOTAL");
         model.addColumn("Worker Name");
-        model.addRow(new Object[]{"Order ID","Service Name","TOTAL","Worker Name"});
+        model.addColumn("Worker phone");
+        model.addRow(new Object[]{"Order ID","Service Name","TOTAL","Worker Name","Worker phone"});
         int i = 0; //to scan the service array
         while (i<Main.OrderArray.size()){ //while service array isn't empty
             if(cus.getCID().equals(Main.OrderArray.get(i).getCustomer().getCID())) { //if the order from the logged in customer
@@ -44,7 +45,8 @@ public class OrdersList extends JFrame {
                 String Wname1 = Main.OrderArray.get(i).getWorker().getFirst_name(); //get service price
                 String Wname2 = Main.OrderArray.get(i).getWorker().getLast_name(); //get service price
                 String Wname = Wname1 + " " + Wname2 ;
-                model.addRow(new Object[]{OID, SID, price, Wname}); //add it to the table
+                String phone = Main.OrderArray.get(i).getWorker().getPhone();
+                model.addRow(new Object[]{OID, SID, price, Wname,phone}); //add it to the table
             }
             i++; //go to the next service
 
@@ -52,7 +54,7 @@ public class OrdersList extends JFrame {
         jTable1.setPreferredSize(new Dimension(400, 400)); // set preferred size to 400 x 400 pixels
         jTable1.setDefaultEditor(Object.class, null); //make the table cannot be edited
         jTable1.setModel(model); //make the table visiable (set the model for the table)
-        jTable1.setBounds(115, 175, 400,200);
+        jTable1.setBounds(90, 175, 440,200);
 
 
         frameorder.setLayout(null);

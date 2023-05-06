@@ -37,7 +37,7 @@ public class Profile extends JFrame {
 
         labeltemp2 = new JLabel("Name: "+this.cus.getFirst_name()+" "+this.cus.getLast_name());
         labeltemp3 = new JLabel("Balance: "+this.cus.getBalance());
-        labeltemp4 = new JLabel("DOB: "+this.cus.getDate_of_Birth());
+        labeltemp4 = new JLabel("Age: " + this.cus.getAge());
         labeltemp5 = new JLabel("Location: "+this.cus.getLocation());
 
         labeltemp2.setBounds(100,150,200,50);
@@ -86,7 +86,7 @@ public class Profile extends JFrame {
 
         labeltemp2 = new JLabel("Name: "+this.wor.getFirst_name()+" "+this.wor.getLast_name());
         labeltemp3 = new JLabel("Balance: "+this.wor.getBalance());
-        //labeltemp4 = new JLabel("DOB: "+this.wor.getphone_number);
+        labeltemp4 = new JLabel("Working area: "+ this.wor.getWorking_Area());
         //labeltemp5 = new JLabel("Working Area: "+this.cus.getLocation());  // add these methods AJ
 
         labeltemp2.setBounds(100,150,200,50);
@@ -111,7 +111,7 @@ public class Profile extends JFrame {
         frameprofile.add(panel2);
         frameprofile.add(labeltemp2);
         frameprofile.add(labeltemp3);
-        //frameprofile.add(labeltemp4);
+        frameprofile.add(labeltemp4);
         //frameprofile.add(labeltemp5);
 
 

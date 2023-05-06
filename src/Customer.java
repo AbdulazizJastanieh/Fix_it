@@ -46,9 +46,11 @@ public class Customer extends Person {
         this.Balance = Balance;
     }
 
+    public int getAge() {
+        return age;
+    }
 
-
-    public Customer(String CID, String First_name, String last_name, Date Date_of_Birth, double Balance,  int age,String Phone_Number, String Location, String Username, String Password) {
+    public Customer(String CID, String First_name, String last_name, Date Date_of_Birth, double Balance, int age, String Phone_Number, String Location, String Username, String Password) {
         super(First_name, last_name,Phone_Number,  Username, Password);
         this.CID = CID;
         this.age =age;

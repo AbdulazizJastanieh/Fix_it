@@ -34,18 +34,20 @@ public class OrdersListW extends JFrame {
         model.addColumn("Order ID");
         model.addColumn("Service Name");
         model.addColumn("TOTAL");
-        model.addColumn("Worker Name");
-        model.addRow(new Object[]{"Order ID","Service Name","TOTAL","Worker Name"});
+        model.addColumn("Customer");
+        model.addColumn("Phone");
+        model.addRow(new Object[]{"Order ID","Service Name","TOTAL","Customer","Phone"});
         int i = 0; //to scan the service array
         while (i<Main.OrderArray.size()){ //while service array isn't empty
             if(wor.getWID().equals(Main.OrderArray.get(i).getWorker().getWID())) { //if the order from the logged in customer
                 String OID = Main.OrderArray.get(i).getOID(); //get sid
                 String SID = Main.OrderArray.get(i).getService().getName(); // get service name
                 Double price = Main.OrderArray.get(i).getTotal();//get service price
-                String Wname1 = Main.OrderArray.get(i).getWorker().getFirst_name(); //get service price
-                String Wname2 = Main.OrderArray.get(i).getWorker().getLast_name(); //get service price
-                String Wname = Wname1 + " " + Wname2 ;
-                model.addRow(new Object[]{OID, SID, price, Wname}); //add it to the table
+                String Cname1 = Main.OrderArray.get(i).getCustomer().getFirst_name(); //get service price
+                String Cname2 = Main.OrderArray.get(i).getCustomer().getLast_name(); //get service price
+                String Cname = Cname1 + " " + Cname2 ;
+                String phone = Main.OrderArray.get(i).getCustomer().getPhone_Number();
+                model.addRow(new Object[]{OID, SID, price, Cname,phone}); //add it to the table
             }
             i++; //go to the next service
 
@@ -53,7 +55,7 @@ public class OrdersListW extends JFrame {
         jTable1.setPreferredSize(new Dimension(400, 400)); // set preferred size to 400 x 400 pixels
         jTable1.setDefaultEditor(Object.class, null); //make the table cannot be edited
         jTable1.setModel(model); //make the table visiable (set the model for the table)
-        jTable1.setBounds(115, 175, 400,200);
+        jTable1.setBounds(80, 175, 450,200);
 
 
         frameorder.setLayout(null);

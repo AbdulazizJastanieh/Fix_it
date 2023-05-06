@@ -101,7 +101,6 @@ public class Login_Cus extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         if (e.getSource()==register) { //this is for altsgil page
             frame.dispose();
             // call customer register interface
@@ -114,6 +113,7 @@ public class Login_Cus extends JFrame implements ActionListener {
                 Customer customer = Customer.LoginCustomer(username,pass);
                 if (Customer.LoginCustomer(username, pass) != null) {
                     new Home(customer);
+                    frame.dispose();
                 } else {
                     new IW(); //warning massage !
 

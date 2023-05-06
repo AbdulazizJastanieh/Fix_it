@@ -18,7 +18,7 @@ public class Main {
         //--------------
         //Gui
 
-        new Separator();
+        new Home(WorkerArray.get(5));
 
         //--------------
     }
