@@ -42,8 +42,11 @@ public class Person {
     }
 
 
+    public String getPhone_Number() {
+        return Phone_Number;
+    }
 
-    public Person(String first_name, String last_name,String Phone_Number, String username, String password) {
+    public Person(String first_name, String last_name, String Phone_Number, String username, String password) {
         First_name = first_name;
         this.last_name = last_name;
         this.Phone_Number = Phone_Number;

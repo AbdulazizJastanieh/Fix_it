@@ -17,7 +17,7 @@ public class Login_Wor extends JFrame implements ActionListener {
     JLabel label = new JLabel();
     JLabel label2 = new JLabel("Don't have an account?");
     JLabel label3 = new JLabel("Already have an account?");
-    JLabel label4 = new JLabel("Email");
+    JLabel label4 = new JLabel("Username");
     JLabel label5 = new JLabel("Password");
     JLabel label6 = new JLabel("Welcome Worker");
 
@@ -56,8 +56,8 @@ public class Login_Wor extends JFrame implements ActionListener {
         label4.setFont(new Font("", Font.PLAIN, 20));
         label5.setBounds(330, 550, 100, 50);
         label5.setFont(new Font("", Font.PLAIN, 20));
-        label6.setBounds(360,435,300,50);
-        label6.setFont(new Font("",Font.PLAIN,30));
+        label6.setBounds(360, 435, 300, 50);
+        label6.setFont(new Font("", Font.PLAIN, 30));
 
         //buttons settings
         button.setBounds(350, 680, 100, 50);
@@ -103,10 +103,19 @@ public class Login_Wor extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource()==button) {
+        if (e.getSource() == button) {
             frame.dispose();
-             new reg_Wor();
-        }
+            new reg_Wor();
+        } else if (e.getSource() == button2) {
+            String username = text.getText();
+            String pass = text2.getText();
+            Worker worker = Worker.LoginWorker(username, pass);
+            if (Worker.LoginWorker(username, pass) != null) {
+                new Home(worker);
+            } else {
+                new IW(); //warning massage !
+            }
 
+        }
     }
 }

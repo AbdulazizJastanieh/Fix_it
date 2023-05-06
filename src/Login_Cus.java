@@ -17,7 +17,7 @@ public class Login_Cus extends JFrame implements ActionListener {
     JLabel label = new JLabel();
     JLabel label2 = new JLabel("Don't have an account?");
     JLabel label3 = new JLabel("Already have an account?");
-    JLabel label4 = new JLabel("Email");
+    JLabel label4 = new JLabel("Username");
     JLabel label5 = new JLabel("Password");
     JLabel label6 = new JLabel("Welcome Customer");
 

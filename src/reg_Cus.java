@@ -141,11 +141,6 @@ public class reg_Cus extends JFrame implements ActionListener {
            }
 
        }
-
-
-
     }
-
-
 }
 

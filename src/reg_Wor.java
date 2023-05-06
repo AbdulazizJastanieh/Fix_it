@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class reg_Wor extends JFrame implements ActionListener {
 
@@ -12,7 +13,7 @@ public class reg_Wor extends JFrame implements ActionListener {
     JLabel label2 = new JLabel("First name"); // a label for the first name text field
     JLabel label3 = new JLabel("Last name"); // a label for the last name text field
     JLabel label4 = new JLabel("Phone "); // a label for the phone number text field
-    JLabel label5 = new JLabel("Email"); // a label for the email text field
+    JLabel label5 = new JLabel("Username"); // a label for the email text field
     JLabel label6 = new JLabel("Password"); // a label for the password text field
     JLabel label7 = new JLabel("working area"); // a label for the working area text field
     JLabel label8 = new JLabel("Ready?"); // a label asking if the user is ready to submit the form
@@ -46,11 +47,11 @@ public class reg_Wor extends JFrame implements ActionListener {
         label4.setFont(new Font("", Font.PLAIN, 20));
         label5.setBounds(100, 625, 100, 50);
         label5.setFont(new Font("", Font.PLAIN, 20));
-        label6.setBounds(100,700,100,50);
-        label6.setFont(new Font("",Font.PLAIN,20));
-        label7.setBounds(100,775,120,50);
-        label7.setFont(new Font("",Font.PLAIN,20));
-        label8.setBounds(275,860,100,50);
+        label6.setBounds(100, 700, 100, 50);
+        label6.setFont(new Font("", Font.PLAIN, 20));
+        label7.setBounds(100, 775, 120, 50);
+        label7.setFont(new Font("", Font.PLAIN, 20));
+        label8.setBounds(275, 860, 100, 50);
 
         // Set up the panel to hold the main label
         panel.setBounds(0, 0, 600, 350);
@@ -64,12 +65,14 @@ public class reg_Wor extends JFrame implements ActionListener {
         text5.setBounds(250, 720, 200, 20);
         text6.setBounds(250, 795, 200, 20);
 
+
         // Set up the "I'm ready" button
         button.setBounds(250, 900, 100, 50);
         button.setText("I'm ready");
         button.setBackground(new Color(70, 97, 61));
         button.setForeground(new Color(245, 245, 245));
         button.setFocusable(false);
+        button.addActionListener(this);
 
         // Set up the main window frame
         frame.setLayout(null);
@@ -101,8 +104,27 @@ public class reg_Wor extends JFrame implements ActionListener {
 
     }
 
-    @Override
-    public void actionPerformed(ActionEvent actionEvent) {
 
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+         /*   if ((e.getSource() == button && text != null) && (text2 != null) && (text3 != null) && (text4 != null) && (text5 != null) && (text6 != null) && (text7 != null)) {
+                String first = text.getText();
+                String last = text2.getText();
+                String phone = text3.getText();
+                String userName = text4.getText();
+                String pass = text5.getText();
+                String Working_area = text6.getText();
+                String sp = "general";
+                try {
+                    Worker.RegisterWorker(first, last, sp, phone, userName, pass, Working_area);
+
+                } catch (SQLException ex) {
+                    System.out.println(ex.getMessage());
+                }
+            } else {
+                new IW();
+           }  */
+
+        }
     }
-}
