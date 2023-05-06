@@ -206,20 +206,39 @@ public class Worker extends Person{
         //here we added the service to the servicelist table.
 
     }
+    public static void ManageService(Worker worker, String SID) throws SQLException {
+        Connection conn = DataBase.connect();
+        Statement s = conn.createStatement(); //create statement
+        s.execute("USE sql8614265"); //to use this database (we only have 1 database in the server)
 
 
-    public static void RemoveService(Worker worker, String SID){
-        for (Service currentservice : worker.services){
-            //this loop will iterate over every object in the service array.
 
-            if (currentservice.getSID().equals(SID)){
-                worker.services.remove(currentservice);
-                //if we find a service object with the same service id. then we remove it.
+        for (Service service : worker.services){
+            //we will go through every service the customer have.
+            if (service.getSID().equals(SID)){
+                //if we enter here that means that the customer has a service with the same SID.
+                //meaning he already has the service in his arraylist. and so he wants to delete it.
+
+                worker.services.remove(service);
+                String query = "Delete from workerService where WID = " + "'" + worker.getWID() + "'" + " and SID = " + "'" + SID + "'";
+                s.execute(query);
+                return;
             }
+
 
         }
 
+        //if we reach this point that means that the worker does not have the service in his arraylist.
+        //and so we need to add it.
+
+        Worker.AddService(worker,SID);
+
+
+
+
+
     }
+
 
     public static ArrayList<Worker> WorkersBySID(String SID){
         //this method will return an arraylist that contains  all the workers who offer a certain service.
@@ -248,6 +267,8 @@ public class Worker extends Person{
         return workers;
 
     }
+
+
 
 
 
