@@ -86,7 +86,7 @@ public class Profile extends JFrame {
 
         labeltemp2 = new JLabel("Name: "+this.wor.getFirst_name()+" "+this.wor.getLast_name());
         labeltemp3 = new JLabel("Balance: "+this.wor.getBalance());
-        //labeltemp4 = new JLabel("DOB: "+this.wor.getPhone());
+        //labeltemp4 = new JLabel("DOB: "+this.wor.getphone_number);
         //labeltemp5 = new JLabel("Working Area: "+this.cus.getLocation());  // add these methods AJ
 
         labeltemp2.setBounds(100,150,200,50);

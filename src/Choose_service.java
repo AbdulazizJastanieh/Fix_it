@@ -22,9 +22,10 @@ public class Choose_service extends JFrame implements ActionListener {
     JLabel label = new JLabel();
     JLabel labeltemp = new JLabel();
 
+    JLabel labeltemp2 = new JLabel("Want to add more?");
+
     JTextField chosen_service = new JTextField();
-    JTextField MYchosen_service = new JTextField();
-    
+
     JButton confirm = new JButton();
     JButton confirmW = new JButton();
 
@@ -103,13 +104,11 @@ public class Choose_service extends JFrame implements ActionListener {
         panel2.setBackground(new Color(76, 102, 67));
 
         label.setIcon(icon);
-        labeltemp.setText("Services");
+        labeltemp.setText("MyServices");
         labeltemp.setFont(new Font(null,Font.PLAIN,100));
         label.setHorizontalTextPosition(JLabel.LEFT);
         labeltemp.setForeground(new Color(232, 214, 162));
-
-        MYchosen_service.setBounds(255,450,100,30);
-
+        labeltemp2.setBounds(255,450,150,30);
 
         model.addColumn("Service ID");
         model.addColumn("Service");
@@ -129,7 +128,7 @@ public class Choose_service extends JFrame implements ActionListener {
         jTable1.setModel(model); //make the table visiable (set the model for the table)
         jTable1.setBounds(115, 175, 400,200);
 
-        confirmW.setText("Continue");
+        confirmW.setText("Here!");
         confirmW.setBackground(new Color(70, 97, 61));
         confirmW.setForeground(new Color(245, 245, 245));
         confirmW.setFont(new Font(null,Font.PLAIN,15));
@@ -142,16 +141,16 @@ public class Choose_service extends JFrame implements ActionListener {
 
         frameservice.setLayout(null);
         frameservice.setTitle("Fix it");
-        frameservice.setSize(650, 600);
+        frameservice.setSize(700, 600);
         frameservice.setResizable(false);
         frameservice.setVisible(true);
         frameservice.getContentPane().setBackground(new Color(232, 214, 162));
         frameservice.setIconImage(icon.getImage());
         panel.add(label);
         panel2.add(labeltemp);
+        frameservice.add(labeltemp2);
         frameservice.add(panel);
         frameservice.add(panel2);
-        frameservice.add(MYchosen_service);
         frameservice.add(jTable1);
         frameservice.add(confirmW);
 
@@ -170,12 +169,8 @@ public class Choose_service extends JFrame implements ActionListener {
 
         }
 
-        if (e.getSource() == confirmW && !(MYchosen_service.getText().isEmpty()) && serviceFound ){
+        if (e.getSource() == confirmW ){
             frameservice.dispose();
-           // new Choose_worker();
-
-        }else  if(e.getSource() == confirmW){
-            new IW(1);
 
         }
 
