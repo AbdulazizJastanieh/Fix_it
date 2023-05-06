@@ -73,10 +73,11 @@ public class DataBase{
                 String wnumber = RS2.getString(6);
                 String wusername = RS2.getString(7);
                 String wpassword = RS2.getString(8);
+                String Working_Area = RS2.getString(9);
 
 
-            //ok now we need to store all of that info into the worker class as object
-                Worker tempWorker = new Worker(WID,wfname,wlname,specialty,balance,wnumber,wusername,wpassword);
+                //ok now we need to store all of that info into the worker class as object
+                Worker tempWorker = new Worker(WID,wfname,wlname,specialty,balance,wnumber,wusername,wpassword,Working_Area);
                 workerArrayList.add(tempWorker);
             }
             RS2.close();
