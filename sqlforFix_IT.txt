@@ -19,8 +19,11 @@ CREATE TABLE Worker (
   balance DECIMAL(10, 2),
   phone VARCHAR(20),
   username VARCHAR(255) NOT NULL,
-  password VARCHAR(255) NOT NULL
+  password VARCHAR(255) NOT NULL,
+  Working_Area VARCHAR(255) NOT NULL
 );
+
+
 
 CREATE TABLE Service (
   SID VARCHAR(255) PRIMARY KEY,
@@ -94,7 +97,6 @@ VALUES
     ('O0003', '2022-03-01', ROUND(RAND() * 1000, 2), 'S0003', 'W0003', 'C0003'),
     ('O0004', '2022-04-01', ROUND(RAND() * 1000, 2), 'S0004', 'W0004', 'C0004'),
     ('O0005', '2022-05-01', ROUND(RAND() * 1000, 2), 'S0005', 'W0005', 'C0005');
-
 
 
 

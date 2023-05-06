@@ -18,8 +18,8 @@ public class Main {
         //--------------
         //Gui
 
-        //new Home(WorkerArray.get(1));
-        new ServicesList();
+        new Home(CustomerArray.get(3));
+        //new Separator();
         //--------------
     }
 }

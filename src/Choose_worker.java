@@ -48,7 +48,8 @@ public class Choose_worker extends JFrame implements ActionListener {
 
         model.addColumn("WID");
         model.addColumn("Name");
-        model.addRow(new Object[]{"WID", "Name"});
+        model.addColumn("Working Area");
+        model.addRow(new Object[]{"WID", "Name","Working Area"});
 
         int i = 0; //to scan the worker array
         while (i < WorkerArray.size()) { //while service array isn't empty
@@ -56,7 +57,8 @@ public class Choose_worker extends JFrame implements ActionListener {
             String first = WorkerArray.get(i).getFirst_name(); // get worker first name
             String last = WorkerArray.get(i).getLast_name(); //get worker last name
             String name = first + " " + last; //get the name
-            model.addRow(new Object[]{WID, name}); //add it to the table
+            String Working_Area = WorkerArray.get(i).getWorking_Area();
+            model.addRow(new Object[]{WID, name,Working_Area}); //add it to the table
             i++; //go to the next worker
         }
 

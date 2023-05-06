@@ -12,6 +12,7 @@ public class Worker extends Person{
     private String speciality;
     private ArrayList<Service> services = new ArrayList<Service>();
     private ArrayList<Order> orders = new ArrayList<Order>();
+    private String Working_Area;
 
     public String getWID() {
         return WID;
@@ -41,11 +42,12 @@ public class Worker extends Person{
 
 
 
-    public Worker(String WID , String First_name, String last_name, String speciality, double Balance ,  String Phone_Number,  String Username, String Password) {
+    public Worker(String WID , String First_name, String last_name, String speciality, double Balance ,  String Phone_Number,  String Username, String Password,String Working_Area) {
         super(First_name, last_name,Phone_Number,  Username, Password);
         this.WID = WID;
         this.Balance = Balance;
         this.speciality = speciality;
+        this.Working_Area = Working_Area;
     }
 
 
@@ -66,7 +68,11 @@ public class Worker extends Person{
         super();
     }
 
-    public static void RegisterWorker(String First_name, String last_name, String speciality, String Phone_Number,  String Username, String Password) throws SQLException {
+    public String getWorking_Area() {
+        return Working_Area;
+    }
+
+    public static void RegisterWorker(String First_name, String last_name, String speciality, String Phone_Number, String Username, String Password, String Working_Area) throws SQLException {
         /* this method will do the following :
             1- create a new worker object.
             2- store that object into the arraylist of workers.
@@ -109,7 +115,7 @@ public class Worker extends Person{
             //here we are done making the New worker id for the worker.
 
 
-        Worker NewWorker = new Worker(NworkerID,First_name,last_name,speciality,0,Phone_Number,Username,Password);
+        Worker NewWorker = new Worker(NworkerID,First_name,last_name,speciality,0,Phone_Number,Username,Password,Working_Area);
 
         //here we create the object.
 
@@ -134,7 +140,7 @@ public class Worker extends Person{
         query += "'" + Phone_Number + "'" + ",";
         query += "'" + Username + "'" + ",";
         query += "'" + Password + "'" + ")";
-
+        //TODO add worker area
         s.execute(query);
 
         //here we execute the query that we were assembling. this should add the object as a record to the database.
