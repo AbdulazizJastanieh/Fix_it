@@ -3,6 +3,7 @@ import com.sun.corba.se.spi.orbutil.threadpool.Work;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.SQLOutput;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -76,7 +77,7 @@ public class Worker extends Person{
         return Working_Area;
     }
 
-    public static Worker RegisterWorker(String First_name, String last_name, String speciality, String Phone_Number, String Username, String Password, String Working_Area) throws SQLException {
+    public static Worker RegisterWorker(String First_name, String last_name, String speciality, String Phone_Number, String Username, String Password, String Working_Area) {
         /* this method will do the following :
             1- create a new worker object.
             2- store that object into the arraylist of workers.
@@ -85,7 +86,7 @@ public class Worker extends Person{
         //the object's balance will be a fixed amount for now.
 
         //the WID needs to be in order. so we have to obtain the last WID from the arraylist and add one to it.
-
+try{
         Worker lastWorker = Main.WorkerArray.get(Main.WorkerArray.size() - 1 );
 
         //now we have a reference to the last worker. now we just need to figure his WID and add one to it.
@@ -149,6 +150,10 @@ public class Worker extends Person{
 
         //here we execute the query that we were assembling. this should add the object as a record to the database.
         return NewWorker;
+    } catch (SQLException ex) {
+        System.out.println(ex.getMessage());
+        return null;
+    }
     }
 
     public static Worker LoginWorker(String Username, String Password){
@@ -164,6 +169,8 @@ public class Worker extends Person{
                     return worker;
             }
         }
+
+
 
         return null;
         //if we reach this point. that means we finished iterating over the arraylist. and we didn't find an object
@@ -197,46 +204,45 @@ public class Worker extends Person{
         s.execute("USE sql8614265"); //to use this database (we only have 1 database in the server)
 
         String query = "";
-        query +=  "insert into servicelist (SID, WID) values ";
+        query +=  "insert into WorkerService values ";
         query += "(" + "'" + SID + "'" + ", " + "'" + worker.getWID() + "'" + ")";
-
 
         s.execute(query);
 
-        //here we added the service to the servicelist table.
+        //here we added the service to the WorkerService table.
 
     }
-    public static void ManageService(Worker worker, String SID) throws SQLException {
-        Connection conn = DataBase.connect();
-        Statement s = conn.createStatement(); //create statement
-        s.execute("USE sql8614265"); //to use this database (we only have 1 database in the server)
+    public static void ManageService(Worker worker, String SID)  {
+        try {
+            Connection conn = DataBase.connect();
+            Statement s = conn.createStatement(); //create statement
+            s.execute("USE sql8614265"); //to use this database (we only have 1 database in the server)
 
 
+            for (Service service : worker.services) {
+                //we will go through every service the customer have.
+                if (service.getSID().equals(SID)) {
+                    //if we enter here that means that the customer has a service with the same SID.
+                    //meaning he already has the service in his arraylist. and so he wants to delete it.
 
-        for (Service service : worker.services){
-            //we will go through every service the customer have.
-            if (service.getSID().equals(SID)){
-                //if we enter here that means that the customer has a service with the same SID.
-                //meaning he already has the service in his arraylist. and so he wants to delete it.
+                    worker.services.remove(service);
+                    String query = "Delete from WorkerService where WID = " + "'" + worker.getWID() + "'" + " and SID = " + "'" + SID + "'";
+                    s.execute(query);
+                    return;
+                }
 
-                worker.services.remove(service);
-                String query = "Delete from workerService where WID = " + "'" + worker.getWID() + "'" + " and SID = " + "'" + SID + "'";
-                s.execute(query);
-                return;
+
             }
 
+            //if we reach this point that means that the worker does not have the service in his arraylist.
+            //and so we need to add it.
 
+            Worker.AddService(worker, SID);
+
+
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
         }
-
-        //if we reach this point that means that the worker does not have the service in his arraylist.
-        //and so we need to add it.
-
-        Worker.AddService(worker,SID);
-
-
-
-
-
     }
 
 

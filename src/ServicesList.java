@@ -27,10 +27,10 @@ public class ServicesList extends JFrame implements ActionListener {
 
     Worker wor = new Worker();
 
-    
-    ServicesList(Worker wor){
 
-        wor = wor;
+    ServicesList(Worker wor) {
+
+        this.wor = wor;
 
         panel.setBounds(0, 0, 150, 125);
         panel.setBackground(new Color(70, 97, 61));
@@ -43,27 +43,27 @@ public class ServicesList extends JFrame implements ActionListener {
         label.setHorizontalTextPosition(JLabel.LEFT);
         labeltemp.setForeground(new Color(232, 214, 162));
 
-        MYchosen_service.setBounds(255,450,100,30);
+        MYchosen_service.setBounds(255, 450, 100, 30);
 
 
         model.addColumn("Service ID");
         model.addColumn("Service");
         model.addColumn("Price");
-        model.addRow(new Object[]{"Service ID","Service name","Price"});
+        model.addRow(new Object[]{"Service ID", "Service name", "Price"});
         int i = 0; //to scan the service array
         System.out.println(Main.ServiceArray.size());
-        while (i<Main.ServiceArray.size()){ //while service array isn't empty
-            String SID =  Main.ServiceArray.get(i).getSID(); //get sid
-            String name =  Main.ServiceArray.get(i).getName(); // get service name
-            Double price =  Main.ServiceArray.get(i).getPrice(); //get service price
-            model.addRow(new Object[]{SID,name,price}); //add it to the table
+        while (i < Main.ServiceArray.size()) { //while service array isn't empty
+            String SID = Main.ServiceArray.get(i).getSID(); //get sid
+            String name = Main.ServiceArray.get(i).getName(); // get service name
+            Double price = Main.ServiceArray.get(i).getPrice(); //get service price
+            model.addRow(new Object[]{SID, name, price}); //add it to the table
             i++; //go to the next service
         }
 
         jTable1.setPreferredSize(new Dimension(400, 400)); // set preferred size to 400 x 400 pixels
         jTable1.setDefaultEditor(Object.class, null); //make the table cannot be edited
         jTable1.setModel(model); //make the table visiable (set the model for the table)
-        jTable1.setBounds(115, 175, 400,200);
+        jTable1.setBounds(115, 175, 400, 200);
 
         confirm.setText("Confirm");
         confirm.setBackground(new Color(70, 97, 61));
@@ -96,9 +96,23 @@ public class ServicesList extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if(e.getSource() == confirm){
-
-            frameservice.dispose();
+        if (e.getSource() == confirm) {
+            int j = 0;
+            boolean found = false;
+                while (j < Main.ServiceArray.size()) {
+                    if (MYchosen_service.getText().equals(Main.ServiceArray.get(j).getSID())) { //compare between the service arraylist and the SID provided
+                            Worker.ManageService(wor,MYchosen_service.getText());
+                            found = true;
+                            break;
+                    }
+                    j++;
+                }
+                if(found == true){
+                frameservice.dispose();
+            }
+                else{
+                    new IW(1);
+                }
         }
     }
 }

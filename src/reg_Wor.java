@@ -108,23 +108,22 @@ public class reg_Wor extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-           if ((e.getSource() == button && (text != null) && (text2 != null) && (text3 != null) && (text4 != null) && (text5 != null) && (text6 != null) && (text7 != null))) {
-                frame.dispose();
-                String first = text.getText();
-                String last = text2.getText();
-                String phone = text3.getText();
-                String userName = text4.getText();
-                String pass = text5.getText();
-                String Working_area = text6.getText();
-                String sp = "general";
-                try {
-                    Worker wor = Worker.RegisterWorker(first, last, sp, phone, userName, pass, Working_area);
-                    new Home(wor);
+        String isEmpty = text7.getText();
+           if ((e.getSource() == button && !(text.getText().equals(isEmpty)) && !(text2.getText().equals(isEmpty)) && !(text3.getText().equals(isEmpty)) && !(text4.getText().equals(isEmpty)) && !(text5.getText().equals(isEmpty)) && !(text6.getText().equals(isEmpty)))) {
+               frame.dispose();
+               String first = text.getText();
+               String last = text2.getText();
+               String phone = text3.getText();
+               String userName = text4.getText();
+               String pass = text5.getText();
+               String Working_area = text6.getText();
+               String sp = "general";
 
-                } catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
-                }
-            } else {
+               Worker wor = Worker.RegisterWorker(first, last, sp, phone, userName, pass, Working_area);
+               new Home(wor);
+
+
+           }else {
                 new IW();
            }
 

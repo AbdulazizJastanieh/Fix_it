@@ -18,7 +18,7 @@ public class Main {
         //--------------
         //Gui
 
-        new reg_Wor();
+        new Separator();
 
         //--------------
     }

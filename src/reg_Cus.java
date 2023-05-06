@@ -29,6 +29,7 @@ public class reg_Cus extends JFrame implements ActionListener {
     TextField text7 = new TextField();
     TextField text8 = new TextField();
     TextField text9 = new TextField();
+    TextField text10 = new TextField();
     ImageIcon icon = new ImageIcon("logo.png");      // Create a new ImageIcon with the file name "logo.png"
     ImageIcon image = new ImageIcon("logo.png");     // Create a new ImageIcon with the file name "logo.png"
 
@@ -75,6 +76,8 @@ public class reg_Cus extends JFrame implements ActionListener {
         text7.setBounds(260,685,200,20);
         text8.setBounds(260,755,200,20);
         text9.setBounds(260,820,200,20);
+        text10.setBounds(260,850,200,20);
+
 
         // Set properties for the button
         ready.setBounds(250, 900, 100, 50);
@@ -121,9 +124,10 @@ public class reg_Cus extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        String isEmpty = text10.getText();
        if ((e.getSource() == ready)){
 
-           if ((text != null)&&(text2 != null)&&(text3 != null)&&(text4 != null)&&(text5 != null)&&(text6 != null)&&(text7 != null)&&(text8 != null)&&(text9 != null)){
+           if (  !(text.getText().equals(isEmpty)) && !(text2.getText().equals(isEmpty)) && !(text3.getText().equals(isEmpty)) && !(text4.getText().equals(isEmpty)) && !(text5.getText().equals(isEmpty)) && !(text6.getText().equals(isEmpty)) && !(text7.getText().equals(isEmpty)) && !(text8.getText().equals(isEmpty)) && !(text9.getText().equals(isEmpty))){
                frame.dispose();
                int day = Integer.parseInt(text4.getText());
                int month = Integer.parseInt(text5.getText());

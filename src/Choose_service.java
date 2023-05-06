@@ -32,6 +32,8 @@ public class Choose_service extends JFrame implements ActionListener {
 
     Customer cus = new Customer();
     Worker wor = new Worker();
+
+    //this is for customer
     Choose_service(Customer cust){
     cus = cust;
 
@@ -98,7 +100,7 @@ public class Choose_service extends JFrame implements ActionListener {
     //for worker
     Choose_service(Worker wor){
 
-        wor = wor;
+        this.wor = wor;
 
 
         panel.setBounds(0, 0, 150, 125);
@@ -118,13 +120,13 @@ public class Choose_service extends JFrame implements ActionListener {
         model.addColumn("Price");
         model.addRow(new Object[]{"Service ID","Service name","Price"});
         int i = 0; //to scan the service array
-        System.out.println(Main.ServiceArray.size());
-        while (i<Main.ServiceArray.size()){ //while service array isn't empty
-            String SID =  Main.ServiceArray.get(i).getSID(); //get sid
-            String name =  Main.ServiceArray.get(i).getName(); // get service name
-            Double price =  Main.ServiceArray.get(i).getPrice(); //get service price
-            model.addRow(new Object[]{SID,name,price}); //add it to the table
+        while (i<wor.getServices().size()){ //while service array isn't empty
+                    String SID = wor.getServices().get(i).getSID(); //get sid
+                    String name = wor.getServices().get(i).getName(); // get service name
+                    Double price =wor.getServices().get(i).getPrice(); //get service price
+                    model.addRow(new Object[]{SID, name, price}); //add it to the table
             i++; //go to the next service
+
         }
         jTable1.setPreferredSize(new Dimension(400, 400)); // set preferred size to 400 x 400 pixels
         jTable1.setDefaultEditor(Object.class, null); //make the table cannot be edited

@@ -112,6 +112,7 @@ public class Login_Wor extends JFrame implements ActionListener {
             Worker worker = Worker.LoginWorker(username, pass);
             if (Worker.LoginWorker(username, pass) != null) {
                 new Home(worker);
+                frame.dispose();
             } else {
                 new IW(); //warning massage !
             }

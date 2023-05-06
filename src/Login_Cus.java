@@ -119,11 +119,7 @@ public class Login_Cus extends JFrame implements ActionListener {
 
                 }
 
-            }else {
-                new IW("b");
             }
-
-
 
 
     }
