@@ -31,6 +31,7 @@ public class Choose_service extends JFrame implements ActionListener {
 
 
     Customer cus = new Customer();
+    Worker wor = new Worker();
     Choose_service(Customer cust){
     cus = cust;
 
@@ -95,7 +96,9 @@ public class Choose_service extends JFrame implements ActionListener {
     }
 
     //for worker
-    Choose_service(int w){
+    Choose_service(Worker wor){
+
+        wor = wor;
 
 
         panel.setBounds(0, 0, 150, 125);
@@ -171,6 +174,7 @@ public class Choose_service extends JFrame implements ActionListener {
 
         if (e.getSource() == confirmW ){
             frameservice.dispose();
+            new ServicesList(wor);
 
         }
 

@@ -25,8 +25,12 @@ public class ServicesList extends JFrame implements ActionListener {
 
     JButton confirm = new JButton();
 
+    Worker wor = new Worker();
+
     
-    ServicesList(){
+    ServicesList(Worker wor){
+
+        wor = wor;
 
         panel.setBounds(0, 0, 150, 125);
         panel.setBackground(new Color(70, 97, 61));
@@ -94,7 +98,7 @@ public class ServicesList extends JFrame implements ActionListener {
 
         if(e.getSource() == confirm){
 
-            new Choose_service(1);
+            frameservice.dispose();
         }
     }
 }
