@@ -108,7 +108,8 @@ public class reg_Wor extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-         /*   if ((e.getSource() == button && text != null) && (text2 != null) && (text3 != null) && (text4 != null) && (text5 != null) && (text6 != null) && (text7 != null)) {
+           if ((e.getSource() == button && (text != null) && (text2 != null) && (text3 != null) && (text4 != null) && (text5 != null) && (text6 != null) && (text7 != null))) {
+                frame.dispose();
                 String first = text.getText();
                 String last = text2.getText();
                 String phone = text3.getText();
@@ -117,14 +118,15 @@ public class reg_Wor extends JFrame implements ActionListener {
                 String Working_area = text6.getText();
                 String sp = "general";
                 try {
-                    Worker.RegisterWorker(first, last, sp, phone, userName, pass, Working_area);
+                    Worker wor = Worker.RegisterWorker(first, last, sp, phone, userName, pass, Working_area);
+                    new Home(wor);
 
                 } catch (SQLException ex) {
                     System.out.println(ex.getMessage());
                 }
             } else {
                 new IW();
-           }  */
+           }
 
         }
     }

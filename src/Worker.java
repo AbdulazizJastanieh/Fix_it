@@ -76,7 +76,7 @@ public class Worker extends Person{
         return Working_Area;
     }
 
-    public static void RegisterWorker(String First_name, String last_name, String speciality, String Phone_Number, String Username, String Password, String Working_Area) throws SQLException {
+    public static Worker RegisterWorker(String First_name, String last_name, String speciality, String Phone_Number, String Username, String Password, String Working_Area) throws SQLException {
         /* this method will do the following :
             1- create a new worker object.
             2- store that object into the arraylist of workers.
@@ -148,7 +148,7 @@ public class Worker extends Person{
         s.execute(query);
 
         //here we execute the query that we were assembling. this should add the object as a record to the database.
-
+        return NewWorker;
     }
 
     public static Worker LoginWorker(String Username, String Password){

@@ -55,6 +55,21 @@ public class IW extends JFrame {
 
     }
 
+    IW(String  x){
+        label.setText("Please fill all text fields");
+        label.setBounds(20,70,500,50);
+        label.setFont(new Font(null,Font.PLAIN,20));
+        frame.setLayout(null);
+        frame.setTitle("Fix it");
+        frame.setSize(400, 200);
+        frame.setResizable(false);
+        frame.setVisible(true);
+        frame.getContentPane().setBackground(new Color(232, 214, 162));
+        frame.setIconImage(icon.getImage());
+        frame.add(label);
+
+    }
+
 
 
 }

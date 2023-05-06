@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="addded working area">
+    <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="GUI UPDATE (NEW CLASSES)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Login_Cus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Login_Cus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Login_Wor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Login_Wor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Worker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/reg_Cus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/reg_Cus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Fix_it/reg_Wor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/reg_Wor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IW.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login_Cus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_Cus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login_Wor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_Wor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reg_Cus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reg_Cus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reg_Wor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reg_Wor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +21,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

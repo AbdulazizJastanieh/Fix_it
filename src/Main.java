@@ -18,8 +18,8 @@ public class Main {
         //--------------
         //Gui
 
-        //new Home(WorkerArray.get(3));
-        new Login_Wor();
+        new reg_Wor();
+
         //--------------
     }
 }

@@ -111,14 +111,18 @@ public class Login_Cus extends JFrame implements ActionListener {
         if (e.getSource()==login){
             String username = text.getText();
             String pass = text2.getText();
-            Customer customer = Customer.LoginCustomer(username,pass);
-            if(Customer.LoginCustomer(username,pass) != null ) {
-                new Home(customer);
+                Customer customer = Customer.LoginCustomer(username,pass);
+                if (Customer.LoginCustomer(username, pass) != null) {
+                    new Home(customer);
+                } else {
+                    new IW(); //warning massage !
+
+                }
+
+            }else {
+                new IW("b");
             }
-            else{
-                new IW(); //warning massage !
-            }
-        }
+
 
 
 
