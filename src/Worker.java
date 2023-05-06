@@ -1,4 +1,6 @@
 //TODO: ADD delete service - ADD getter for orders(also for customer)
+import com.sun.corba.se.spi.orbutil.threadpool.Work;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -139,8 +141,8 @@ public class Worker extends Person{
         query +=  0  + ",";
         query += "'" + Phone_Number + "'" + ",";
         query += "'" + Username + "'" + ",";
-        query += "'" + Password + "'" + ")";
-        //TODO add worker area
+        query += "'" + Password + "'" + ",";
+        query += "'" + Working_Area + "'" + ")";
         s.execute(query);
 
         //here we execute the query that we were assembling. this should add the object as a record to the database.
