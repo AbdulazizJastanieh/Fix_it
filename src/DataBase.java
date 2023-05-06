@@ -14,10 +14,11 @@ public class DataBase{
             Class.forName("com.mysql.cj.jdbc.Driver"); //things related to the JAR file
             Connection conn = DriverManager.getConnection(url, username, password); //making the connection
             return conn;
-        } catch(Exception e){ System.out.println(e);
-        } finally { //might have error here
+        } catch(Exception e){
+            System.out.println(e);
             return null;
         }
+
 
     }
 

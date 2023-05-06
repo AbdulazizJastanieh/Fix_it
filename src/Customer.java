@@ -75,14 +75,14 @@ public class Customer extends Person {
                 '}';
     }
 
-    public static void RegisterCustomer( String First_name, String last_name, Date Date_of_Birth, int age,String Phone_Number, String Location, String Username, String Password) throws SQLException {
+    public static Customer RegisterCustomer( String First_name, String last_name, Date Date_of_Birth, int age,String Phone_Number, String Location, String Username, String Password) {
         /* this method will do the following :
             1- create a new Customer object.
             2- store that object into the arraylist of Customers.
             3- create a new record in the database that represent the new object.
          */
-
-        Customer lastCustomer = Main.CustomerArray.get(Main.CustomerArray.size() - 1 );
+    try {
+        Customer lastCustomer = Main.CustomerArray.get(Main.CustomerArray.size() - 1);
 
         //now we have a reference to the last customer. now we just need to figure his CID and add one to it.
 
@@ -101,22 +101,17 @@ public class Customer extends Person {
 
         if (Ncustomernum < 10) {
             NcustomerID = "C000" + Ncustomernum;
-        }
-        else if (Ncustomernum < 99) {
+        } else if (Ncustomernum < 99) {
             NcustomerID = "C00" + Ncustomernum;
-        }
-        else if (Ncustomernum < 999)
-        {
+        } else if (Ncustomernum < 999) {
             NcustomerID = "C0" + Ncustomernum;
-        }
-        else {
+        } else {
             NcustomerID = "C" + Ncustomernum;
         }
         //here we are done making the New Customer id for the customer.
 
 
-
-        Customer NewCustomer = new Customer(NcustomerID,First_name,last_name,Date_of_Birth,200,age,Phone_Number,Location,Username,Password);
+        Customer NewCustomer = new Customer(NcustomerID, First_name, last_name, Date_of_Birth, 200, age, Phone_Number, Location, Username, Password);
 
         //here we create the object.
 
@@ -124,7 +119,7 @@ public class Customer extends Person {
 
         //here we add the new worker object to the worker arraylist.
 
-        Connection conn=  DataBase.connect();
+        Connection conn = DataBase.connect();
         //here we make the connection with the database website.
 
         Statement s = conn.createStatement(); //create statement
@@ -141,17 +136,22 @@ public class Customer extends Person {
         query += "'" + First_name + "'" + ",";
         query += "'" + last_name + "'" + ",";
         query += "'" + formattedDate + "'" + ",";
-        query +=  200  + ",";
+        query += 200 + ",";
         query += "'" + age + "'" + ",";
         query += "'" + Phone_Number + "'" + ",";
         query += "'" + Location + "'" + ",";
         query += "'" + Username + "'" + ",";
         query += "'" + Password + "'" + ")";
 
-        s.executeQuery(query);
+        s.execute(query);
 
         //here we execute the query that we were assembling. this should add the object as a record to the database.
-
+        return NewCustomer;
+    }
+    catch(SQLException e){
+        System.out.println(e.getMessage());
+        return null;
+    }
     }
 
     public static Customer LoginCustomer(String Username, String Password){

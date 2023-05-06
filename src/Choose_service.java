@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -28,9 +29,9 @@ public class Choose_service extends JFrame implements ActionListener {
     JButton confirmW = new JButton();
 
 
-
-    Choose_service(){
-
+    Customer cus = new Customer();
+    Choose_service(Customer cust){
+    cus = cust;
 
         panel.setBounds(0, 0, 150, 125);
         panel.setBackground(new Color(70, 97, 61));
@@ -52,7 +53,6 @@ public class Choose_service extends JFrame implements ActionListener {
         model.addColumn("Price");
         model.addRow(new Object[]{"Service ID","Service name","Price"});
         int i = 0; //to scan the service array
-        System.out.println(Main.ServiceArray.size());
         while (i<Main.ServiceArray.size()){ //while service array isn't empty
             String SID =  Main.ServiceArray.get(i).getSID(); //get sid
             String name =  Main.ServiceArray.get(i).getName(); // get service name
@@ -159,24 +159,40 @@ public class Choose_service extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        if (e.getSource() == confirm && !(chosen_service.getText().isEmpty())){
+    boolean serviceFound = isServiceExsist(chosen_service.getText()); //to know if he entered a valid service number or not
+        if (e.getSource() == confirm && !(chosen_service.getText().isEmpty()) && serviceFound){
             frameservice.dispose();
-            new Choose_worker();
+           ArrayList<Worker> aWorker = Worker.WorkersBySID(chosen_service.getText());
+            new Choose_worker(aWorker,cus,chosen_service.getText());
 
-        }else{
+        }else if(e.getSource() == confirm){
             new IW(1);
 
         }
 
-        if (e.getSource() == confirmW && !(MYchosen_service.getText().isEmpty())){
+        if (e.getSource() == confirmW && !(MYchosen_service.getText().isEmpty()) && serviceFound ){
             frameservice.dispose();
-            //new Choose_worker();
+           // new Choose_worker();
 
-        }else{
+        }else  if(e.getSource() == confirmW){
             new IW(1);
 
         }
 
     }
+    private static Boolean isServiceExsist(String SID){ //this method is used to check if the service exsist on the array or not
+        int i =0;
+        boolean found = false;
+        while(i<Main.ServiceArray.size()){
+            if(SID.equals(Main.ServiceArray.get(i).getSID())){
+                found = true;
+            }
+            i++;
+        }
+        return found;
+    }
+
+
+
+
 }

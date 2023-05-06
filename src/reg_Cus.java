@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 public class reg_Cus extends JFrame implements ActionListener {
     JFrame frame = new JFrame();                    // Create a new JFrame
@@ -81,7 +82,7 @@ public class reg_Cus extends JFrame implements ActionListener {
         ready.setBackground(new Color(70, 97, 61));
         ready.setForeground(new Color(245, 245, 245));
         ready.setFocusable(false);
-
+        ready.addActionListener(this);
         // Set properties for the frame
         frame.setLayout(null);
         frame.setTitle("Fix it");
@@ -120,13 +121,19 @@ public class reg_Cus extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        /*
        if ((e.getSource() == ready)){
 
            if ((text != null)&&(text2 != null)&&(text3 != null)&&(text4 != null)&&(text5 != null)&&(text6 != null)&&(text7 != null)&&(text8 != null)&&(text9 != null)){
+               frame.dispose();
+               int day = Integer.parseInt(text4.getText());
+               int month = Integer.parseInt(text5.getText());
+               int year = Integer.parseInt(text6.getText());
+               Date DOB = new Date(day,month,year);
+               Date currentDate = new Date(); // Get the current date
+               long diffInMillies = Math.abs(currentDate.getTime() - DOB.getTime()); // Calculate the difference between the current date and the date of birth in milliseconds
 
-               Customer cus = new Customer.RegisterCustomer();
-
+               int age = (int) (diffInMillies / (365.25 * 24 * 60 * 60 * 1000)); // Convert the difference in milliseconds to age in years
+               Customer cus = Customer.RegisterCustomer(text.getText(),text2.getText(),DOB,age,text3.getText(),text9.getText(),text7.getText(),text8.getText());
                new Home(cus);
 
            }else{
@@ -135,7 +142,7 @@ public class reg_Cus extends JFrame implements ActionListener {
 
        }
 
-         */
+
 
     }
 
