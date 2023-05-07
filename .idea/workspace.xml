@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="finish demo V0.1 (few errors)">
+    <list default="true" id="93f8510b-5ea5-40c8-ba0b-5511b936f076" name="Changes" comment="GUI UPDATE (NEW CLASSES)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Login_Cus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Login_Cus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/OrdersList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/OrdersList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/OrdersListW.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/OrdersListW.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Profile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/reg_Cus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/reg_Cus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login_Cus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_Cus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/ServicesList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/ServicesList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/Worker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fix_it/reg_Wor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fix_it/reg_Wor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrdersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrdersList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrdersListW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrdersListW.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reg_Cus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reg_Cus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServicesList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServicesList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reg_Wor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reg_Wor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,14 +89,7 @@
       <option name="project" value="LOCAL" />
       <updated>1683293968086</updated>
     </task>
-    <task id="LOCAL-00006" summary="finish demo V0.1 (few errors)">
-      <created>1683404549406</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1683404549406</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,7 +108,6 @@
     <MESSAGE value="please add the textBox" />
     <MESSAGE value="I added some methods" />
     <MESSAGE value="Fixed the order method" />
-    <MESSAGE value="finish demo V0.1 (few errors)" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish demo V0.1 (few errors)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the order method" />
   </component>
 </project>
