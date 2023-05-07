@@ -119,7 +119,12 @@ public class reg_Wor extends JFrame implements ActionListener {
                String Working_area = text6.getText();
                String sp = "general";
 
-               Worker wor = Worker.RegisterWorker(first, last, sp, phone, userName, pass, Working_area);
+               Worker wor = null;
+               try {
+                   wor = Worker.RegisterWorker(first, last, sp, phone, userName, pass, Working_area);
+               } catch (SQLException ex) {
+                   throw new RuntimeException(ex);
+               }
                new Home(wor);
 
 
