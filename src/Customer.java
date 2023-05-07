@@ -11,6 +11,11 @@ public class Customer extends Person {
     private String Location;
     private double Balance;
     private Date Date_of_Birth;
+
+    public void setDate_of_Birth(Date date_of_Birth) {
+        Date_of_Birth = date_of_Birth;
+    }
+
     private int age;
     private ArrayList<Order> orders = new ArrayList<Order>();
 
@@ -48,6 +53,10 @@ public class Customer extends Person {
 
     public int getAge() {
         return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public Customer(String CID, String First_name, String last_name, Date Date_of_Birth, double Balance, int age, String Phone_Number, String Location, String Username, String Password) {

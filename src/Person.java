@@ -41,6 +41,9 @@ public class Person {
         this.Password = Password;
     }
 
+    public void setPhone_Number(String phone_Number) {
+        Phone_Number = phone_Number;
+    }
 
     public String getPhone_Number() {
         return Phone_Number;

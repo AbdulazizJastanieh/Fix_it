@@ -45,9 +45,15 @@ public class Worker extends Person{
         this.Balance = Balance;
     }
 
+    public String getSpeciality() {
+        return speciality;
+    }
 
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
 
-    public Worker(String WID , String First_name, String last_name, String speciality, double Balance ,  String Phone_Number,  String Username, String Password,String Working_Area) {
+    public Worker(String WID , String First_name, String last_name, String speciality, double Balance , String Phone_Number, String Username, String Password, String Working_Area) {
         super(First_name, last_name,Phone_Number,  Username, Password);
         this.WID = WID;
         this.Balance = Balance;
