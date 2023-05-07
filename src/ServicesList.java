@@ -3,7 +3,6 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.SQLException;
 
 public class ServicesList extends JFrame implements ActionListener {
 
@@ -102,12 +101,8 @@ public class ServicesList extends JFrame implements ActionListener {
             boolean found = false;
                 while (j < Main.ServiceArray.size()) {
                     if (MYchosen_service.getText().equals(Main.ServiceArray.get(j).getSID())) { //compare between the service arraylist and the SID provided
-                        try {
                             Worker.ManageService(wor,MYchosen_service.getText());
-                        } catch (SQLException ex) {
-                            throw new RuntimeException(ex);
-                        }
-                        found = true;
+                            found = true;
                             break;
                     }
                     j++;
