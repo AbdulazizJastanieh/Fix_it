@@ -199,17 +199,6 @@ public class Order {
         s.execute(query3);
 
         //here we are done making the changes to the database.
-
-
-
-
-
-
-
-
-
-
-
     }
 
 

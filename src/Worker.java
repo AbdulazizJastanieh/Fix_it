@@ -224,7 +224,6 @@ try{
                 if (service.getSID().equals(SID)) {
                     //if we enter here that means that the customer has a service with the same SID.
                     //meaning he already has the service in his arraylist. and so he wants to delete it.
-
                     worker.services.remove(service);
                     String query = "Delete from WorkerService where WID = " + "'" + worker.getWID() + "'" + " and SID = " + "'" + SID + "'";
                     s.execute(query);
