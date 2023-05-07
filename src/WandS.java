@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+//v1
 public class WandS extends JFrame implements ActionListener {
     
     //stands for wallet and shop (not real shop just a design)

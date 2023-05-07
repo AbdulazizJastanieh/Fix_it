@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-
+//v1
 public class WandSw extends JFrame {
 
     //stands for wallet and shop (not real shop just a design)

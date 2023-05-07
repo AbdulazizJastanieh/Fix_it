@@ -5,7 +5,7 @@ import java.sql.Statement;
 import java.util.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+//v1
 public class Customer extends Person {
     private String CID;
     private String Location;

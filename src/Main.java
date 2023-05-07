@@ -1,5 +1,6 @@
 import java.sql.*;
 import java.util.*;
+//v1
 public class Main {
     public static ArrayList<Customer> CustomerArray = new ArrayList<Customer>(); //make arraylist of customer
     public static ArrayList<Worker> WorkerArray = new ArrayList<Worker>(); //make arraylist of worker

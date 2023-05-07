@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.Year;
 import java.util.Date;
-
+//v1
 public class reg_Cus extends JFrame implements ActionListener {
     JFrame frame = new JFrame();                    // Create a new JFrame
     JPanel panel = new JPanel();                    // Create a new JPanel
